@@ -9,7 +9,6 @@ body {
 	background: radial-gradient(circle, $background1, $background2);
 }
 
-a {
-	color: white;
-	text-decoration:none
+div.title {
+	color: black;
 }

@@ -12,7 +12,7 @@
       <td><%= address.street_and_number %></td>
       <td><%= address.post_code %></td>
       <td><%= link_to "Edytuj", edit_address_path(address) %></td>
-      <td><%= link_to "Usuń", address, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Usuń", address, :confirm => 'Jesteś tego pewny?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

@@ -1,4 +1,4 @@
-<% provide(:title, "Produkt") %>
+<% title "Product" %>
 
 <p>
   <strong>Name:</strong>

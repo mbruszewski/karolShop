@@ -1,4 +1,4 @@
-<% provide(:title, "Kategoria") %>
+<% title "Category" %>
 
 <p>
   <strong>Name:</strong>

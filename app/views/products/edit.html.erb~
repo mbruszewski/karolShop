@@ -1,4 +1,4 @@
-<% provide(:title, "Edytuj produkt") %>
+<% title "Edit Product" %>
 
 <%= render 'form' %>
 
