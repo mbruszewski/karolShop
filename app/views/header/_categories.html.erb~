@@ -1,0 +1,16 @@
+<% if current_user != nil && current_user.admin %>
+	<div class="item">
+		<div class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Kategorie produktów
+			<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+				<li><%= link_to "Wszystkie", categories_path %></li>
+				<li class="divider"></li>							
+				<li><%= link_to "Dodaj nowy", categories_path + "/new" %></li>
+			</ul>
+		</div>
+	</div>
+<% end %>
+

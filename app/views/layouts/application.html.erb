@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>KarolShop</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Shop" %></title>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+		<%= render "layouts/header" %>
+    <div class="container-fluid">
+  	  <div class="row-fluid">
+  		  <div class="span2 offset2">
+  			  <%= render "layouts/left_column" %>
+		   	</div>
+  			<div class="span5 offset1">
+    			<%= render "layouts/right_column" %>
+    		</div>
+    	</div>
+    </div>
+  </body>
 </html>

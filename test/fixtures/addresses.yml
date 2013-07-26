@@ -1,0 +1,9 @@
+one:
+  city: MyString
+  street_and_number: MyString
+  post_code: 1
+
+two:
+  city: MyString
+  street_and_number: MyString
+  post_code: 1

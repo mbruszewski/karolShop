@@ -1,0 +1,18 @@
+
+<% if current_user != nil
+
+	<div class="item">
+		<div class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Adresy
+			<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+				<li><%= link_to "Wszystkie", addresses_path %></li>
+				<li class="divider"></li>							
+				<li><%= link_to "Dodaj nowy", addresses_path + "/new" %></li>
+			</ul>
+		</div>
+	</div>
+
+<% end %>

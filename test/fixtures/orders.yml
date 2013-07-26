@@ -1,0 +1,9 @@
+one:
+  status: MyString
+  user_id: 1
+  address_id: 1
+
+two:
+  status: MyString
+  user_id: 1
+  address_id: 1

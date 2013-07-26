@@ -1,0 +1,15 @@
+$background2: #000090;
+$background1: white;
+
+html {
+	background: radial-gradient(circle, $background1, $background2);
+}
+
+body {
+	background: radial-gradient(circle, $background1, $background2);
+}
+
+a {
+	color: white;
+	text-decoration:none
+}

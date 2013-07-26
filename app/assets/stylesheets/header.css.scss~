@@ -1,0 +1,31 @@
+div.header{
+	background: black;
+	font-size: 15px;
+	height: 40px;
+	text-align: left;
+}
+
+div.item{
+	padding: 10px;
+	border-style: solid;
+	border-color: white;
+	float: left;
+	border-width: 1px;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+div.item :hover{
+	background: white;
+	color: black;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a :hover {
+	text-decoration: none;
+}
+

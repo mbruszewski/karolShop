@@ -1,4 +1,22 @@
 KarolShop::Application.routes.draw do
+  resources :products
+
+  resources :categories
+
+  resources :orders
+
+  resources :addresses
+
+  resources :users
+	resources :main
+	resources :sessions
+
+
+	root to: "main#index"
+
+	match "/login" => "sessions#new", as: :login
+	match "/logout" => "sessions#destroy", as: :logout
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

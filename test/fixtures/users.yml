@@ -1,0 +1,9 @@
+one:
+  Login: MyString
+  Password: MyString
+  Admin?: 
+
+two:
+  Login: MyString
+  Password: MyString
+  Admin?: 
