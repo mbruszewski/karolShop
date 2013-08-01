@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726114845) do
+ActiveRecord::Schema.define(:version => 20130801120233) do
 
   create_table "addresses", :force => true do |t|
     t.string   "city"
@@ -22,18 +22,48 @@ ActiveRecord::Schema.define(:version => 20130726114845) do
     t.datetime "updated_at",        :null => false
   end
 
+  create_table "brands", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  create_table "orders", :force => true do |t|
-    t.string   "status"
-    t.integer  "user_id"
-    t.integer  "address_id"
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "image_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "models", :force => true do |t|
+    t.string   "name"
+    t.integer  "company_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "order_items", :force => true do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.integer  "count"
+    t.integer  "order_id"
+    t.integer  "product_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "orders", :force => true do |t|
+    t.string   "status",     :default => "nowy"
+    t.integer  "user_id"
+    t.integer  "address_id"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
   end
 
   create_table "products", :force => true do |t|
@@ -44,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20130726114845) do
     t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "brand_id"
   end
 
   create_table "users", :force => true do |t|
@@ -55,5 +86,12 @@ ActiveRecord::Schema.define(:version => 20130726114845) do
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
+
+  create_table "versions", :force => true do |t|
+    t.string   "name"
+    t.integer  "model_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

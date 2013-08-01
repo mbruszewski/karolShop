@@ -1,0 +1,2 @@
+module OnlyAdminHelper
+end

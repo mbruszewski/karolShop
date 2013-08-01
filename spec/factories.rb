@@ -15,6 +15,23 @@ FactoryGirl.define do
 		post_code "15-666"
 		user
   end
+	
+	factory :brand do	
+		
+	end
+
+	factory :company do
+		name "company name"
+		image_url "url.jakistam.pl"
+	end
+
+	factory :model do
+				
+	end
+
+	factory :version do
+	
+	end
 
 =begin
   factory :micropost do

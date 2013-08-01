@@ -1,0 +1,2 @@
+class VersionsController < OnlyAdminController
+end

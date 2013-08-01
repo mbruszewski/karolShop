@@ -10,10 +10,10 @@ FactoryGirl.define do
   end
 
 	factory :address do
-    user_id user
 		city "Bialystok"
 		street_and_number "Tab 11"
 		post_code "15-666"
+		user
   end
 
 =begin
