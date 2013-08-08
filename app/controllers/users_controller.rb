@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UsersController < ApplicationController
 	before_filter :admin_user, only: [:index]
 	before_filter :not_logged_in_user, only: [:new, :create]
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
 	  @user = User.new(params[:user])
 	  if @user.save
 			session[:user_id] = @user
-	    redirect_to root_path, :notice => "Successfully created user."
+	    redirect_to root_path, :notice => new_string("użytkownika.")
 	  else
 	    render :action => 'new'
 	  end
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
 		if params[:id] == current_user || current_user.admin
 		  @user = User.find(params[:id])
 		  if @user.update_attributes(params[:user])
-		    redirect_to root_path, :notice  => "Successfully updated user."
+		    redirect_to root_path, :notice  => edit_string("użytkownika.")
 		  else
 		    render :action => 'edit'
 		  end
@@ -53,7 +54,7 @@ class UsersController < ApplicationController
 		if params[:id] == current_user || current_user.admin
 		  @user = User.find(params[:id])
 		  @user.destroy
-		  redirect_to root_path, :notice => "Successfully destroyed user."
+		  redirect_to root_path, :notice => destroy_string("użytkownika.")
 		else
 			redirect_to root_path
 		end

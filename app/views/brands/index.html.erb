@@ -1,0 +1,16 @@
+<% provide(:title, "Wszystkie firmy") %>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>Nazwa</th>
+	</tr>
+	<% for brand in @brands %>
+	<tr>
+		<td><%= brand.id %></td>
+		<td><%= brand.name %></td>
+		<td><%= link_to "Edytuj", edit_brand_path(brand) %></td>
+		<td><%= link_to "Usuń", brand, confirm: "Jesteś tego pewny?", method: :delete %></td>
+	</tr>
+	<% end %>
+</table>

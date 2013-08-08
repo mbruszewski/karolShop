@@ -1,7 +1,9 @@
+# -*- encoding : utf-8 -*-
 class Version < ActiveRecord::Base
-  attr_accessible :model_id, :namegeid
+	attr_accessible :model_id, :name
 
-	has_and_belongs_to_many :products
-
+  has_many :products_versions
+	has_many :products, through: :products_versions, source: "product"
+  belongs_to :model
 
 end

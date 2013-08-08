@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CategoriesController < OnlyAdminController
   def index
     @categories = Category.all
@@ -14,7 +15,7 @@ class CategoriesController < OnlyAdminController
   def create
     @category = Category.new(params[:category])
     if @category.save
-      redirect_to @category, :notice => "Successfully created category."
+      redirect_to @category, :notice => new_string("kategorie.")
     else
       render :action => 'new'
     end
@@ -27,7 +28,7 @@ class CategoriesController < OnlyAdminController
   def update
     @category = Category.find(params[:id])
     if @category.update_attributes(params[:category])
-      redirect_to @category, :notice  => "Successfully updated category."
+      redirect_to @category, :notice  => edit_string("kategorie.")
     else
       render :action => 'edit'
     end
@@ -36,6 +37,6 @@ class CategoriesController < OnlyAdminController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to categories_url, :notice => "Successfully destroyed category."
+    redirect_to categories_url, :notice => destroy_string("kategorie")
   end
 end

@@ -1,6 +1,11 @@
+# -*- encoding : utf-8 -*-
+#!/bin/env ruby
+# encoding: utf-8
+
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  	protect_from_forgery
 	helper_method :current_user
+	
 
 	def load_order
 		@order = Order.find_or_initialize_by_id(session[:order_id], status: "nowy", user: current_user)
@@ -9,6 +14,21 @@ class ApplicationController < ActionController::Base
 		  session[:order_id] = @order.id
 		end
 	end
+
+	
+	def new_string(string)
+		return "Pomyślnie dodano " + string
+	end
+
+	def edit_string(string)
+		return "Pomyślnie edytowano " + string
+	end
+
+	def destroy(string)
+		return "Pomyślnie usunięto " + string
+	end
+	
+
 
 
 	private
@@ -36,6 +56,6 @@ class ApplicationController < ActionController::Base
 		end
 
 		def orders
-			@ord = current_user.orders
+			@order = current_user.orders
 		end
 end

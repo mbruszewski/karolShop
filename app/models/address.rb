@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Address < ActiveRecord::Base
   attr_accessible :city, :street_and_number, :post_code
 
@@ -8,5 +9,5 @@ class Address < ActiveRecord::Base
 	validates :post_code, presence: :true, format: { with: VALID_ZIP_CODE_REGEX }
 
 	belongs_to :user
-	has_many :order
+	has_many :orders
 end

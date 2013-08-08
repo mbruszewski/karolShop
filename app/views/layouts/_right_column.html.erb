@@ -4,7 +4,8 @@
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
   <% end %>
 	<div id="title">
-  	<%= content_tag :h1, yield(:title) %>
+ 	 	<%= content_tag :h1, yield(:title) %>
 	</div>
+	<br/>
   <%= yield %>
 </div>

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProductsController < ApplicationController
   def index
     @products = Product.all
@@ -14,7 +15,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
-      redirect_to @product, :notice => "Successfully created product."
+      redirect_to @product, :notice => new_string("produkt.")
     else
       render :action => 'new'
     end
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(params[:product])
-      redirect_to @product, :notice  => "Successfully updated product."
+      redirect_to @product, :notice  => edit_string("produkt.")
     else
       render :action => 'edit'
     end
@@ -36,6 +37,6 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to products_url, :notice => "Successfully destroyed product."
+    redirect_to products_url, :notice => destroy_string("produkt.")
   end
 end

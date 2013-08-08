@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class OrdersController < ApplicationController
 	before_filter :orders
 	before_filter :logged_in_user
@@ -17,7 +18,7 @@ class OrdersController < ApplicationController
   def create
     @order = @ord.new(params[:order])
     if @order.save
-      redirect_to @order, :notice => "Successfully created order."
+      redirect_to @order
     else
       render :action => 'new'
     end
@@ -30,7 +31,7 @@ class OrdersController < ApplicationController
   def update
     @order = @ord.find(params[:id])
     if @order.update_attributes(params[:order])
-      redirect_to @order, :notice  => "Successfully updated order."
+      redirect_to @order
     else
       render :action => 'edit'
     end
@@ -39,6 +40,6 @@ class OrdersController < ApplicationController
   def destroy
     @order = @ord.find(params[:id])
     @order.destroy
-    redirect_to orders_url, :notice => "Successfully destroyed order."
+    redirect_to orders_url, :notice => destroy_string("zamówienie.")
   end
 end

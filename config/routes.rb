@@ -1,15 +1,18 @@
+# -*- encoding : utf-8 -*-
 KarolShop::Application.routes.draw do
-  resources :products
-
-  resources :categories
-
-  resources :orders
-
-  resources :addresses
-
-  resources :users
+  	resources :products
+  	resources :categories
+  	resources :orders
+  	resources :addresses
+	resources :users
 	resources :main
 	resources :sessions
+	
+	resources :order_items
+	resources :versions
+	resources :models	
+	resources :companies
+	resources :brands
 
 
 	root to: "main#index"

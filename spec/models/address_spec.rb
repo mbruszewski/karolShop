@@ -1,10 +1,13 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 
 describe Address do
-	
+
+	let(:user) { FactoryGirl.create(:user) }
+		
 	
  	before {
-		@address = Address.new(city: "bialystok", street_and_number: "jakastam 5", post_code: "15-756")
+		@address = user.addresses.new(city: "bialystok", street_and_number: "jakastam 5", post_code: "15-756")
   	}
 
 	it { should respond_to(:id) }

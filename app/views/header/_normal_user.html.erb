@@ -1,0 +1,16 @@
+<% if current_user != nil %>
+	<div class="item">
+		<div class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Ustawienia użytkownika
+			<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelleby="dropdownMenu">
+			
+				<%= render "header/not_admin/users" %>
+				<li class="divider"></li>		
+
+			</ul>
+		</div>
+	</div>
+<% end %>

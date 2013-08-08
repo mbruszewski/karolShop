@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class User < ActiveRecord::Base
   attr_accessible :login, :password, :password_confirmation
 	has_secure_password

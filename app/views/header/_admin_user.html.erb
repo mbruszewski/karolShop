@@ -1,0 +1,25 @@
+<% if current_user != nil && current_user.admin %>
+	<div class="item">
+		<div class="dropdown">
+			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+			Opcje admina
+			<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu" role="menu" aria-labelleby="dropdownMenu">
+			
+				<%= render "header/admin/companies" %>
+				<li class="divider"></li>		
+				<%= render "header/admin/models" %>
+				<li class="divider"></li>
+				<%= render "header/admin/versions" %>
+				<li class="divider"></li>
+				<%= render "header/admin/brands" %>
+				<li class="divider"></li>
+				<%= render "header/admin/categories" %>
+				<li class="divider"></li>			
+				<%= render "header/admin/products" %>
+
+			</ul>
+		</div>
+	</div>
+<% end %>

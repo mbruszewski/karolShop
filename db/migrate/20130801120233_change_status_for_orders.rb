@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ChangeStatusForOrders < ActiveRecord::Migration
   def up
 	change_table :orders do |t|

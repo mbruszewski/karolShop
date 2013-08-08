@@ -1,13 +1,11 @@
+# -*- encoding : utf-8 -*-
 require 'spec_helper'
 
 describe User do
+
 	before do
     	@user = User.new(login: "example@wp.pl", password: "foobar", password_confirmation: "foobar")
   	end
-
-	let(:user) { FactoryGirl.create(:user) }
-
-	let!(:a1) { FactoryGirl.create(:address, user_id: user, city: "Bialystok", street_and_number: "Tab 13", post_code: "15-633") }
 
 	subject { @user }
 
@@ -15,6 +13,7 @@ describe User do
 	it { should respond_to(:login) }
 	it { should respond_to(:password) }
 	it { should respond_to(:admin) }
+
 
 	describe "login" do
 		describe "should be email 1" do
