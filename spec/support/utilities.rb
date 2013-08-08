@@ -4,6 +4,4 @@ def sign_in(user)
 	fill_in "Login", with: user.login
 	fill_in	"Hasło", with: user.password
 	click_button "Zaloguj"
-	
-
 end

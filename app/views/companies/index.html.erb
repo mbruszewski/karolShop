@@ -1,0 +1,13 @@
+<% provide(:title, "Wszystkie marki samochodów") %>
+
+<table>
+  <tr>Nazwa</tr>
+  <% for company in @companies %>
+    <tr>
+      <td>company.name</td>
+      <td><%= link_to "Edytuj", edit_company_path(company) %></td>
+      <td><%= link_to "Usuń", company, confirm: "Jesteś tego pewny?", method: :delete %></td>
+    </tr>
+  <% end %>
+
+</table>

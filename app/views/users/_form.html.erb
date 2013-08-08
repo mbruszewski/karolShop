@@ -3,8 +3,8 @@
   <p>
     <%= f.label :login, "Login (e-mail)" %><br />
 
-		<% if yield(:title) == "Edit user" %>
- 	   	<%= f.text_field :login, disabled: :true %>
+		<% if yield(:title) == "Edycja użytkownika" %>
+ 	   	<%= f.text_field :login, disabled: true %>
 		<% else %>
 			<%= f.text_field :login%>
 		<% end %>
