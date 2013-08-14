@@ -1,9 +1,9 @@
 # -*- encoding : utf-8 -*-
 KarolShop::Application.routes.draw do
-  	resources :products
-  	resources :categories
-  	resources :orders
-  	resources :addresses
+  resources :products
+  resources :categories
+  resources :orders
+  resources :addresses
 	resources :users
 	resources :main
 	resources :sessions
@@ -14,11 +14,15 @@ KarolShop::Application.routes.draw do
 	resources :companies
 	resources :brands
 
+  
 
 	root to: "main#index"
 
 	match "/login" => "sessions#new", as: :login
 	match "/logout" => "sessions#destroy", as: :logout
+
+  match "/polish" => "languages#polish", as: :polish
+  match "/english" => "languages#english", as: :english
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

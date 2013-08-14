@@ -14,7 +14,7 @@ class AddressesController < ApplicationController
   def create
     @address = current_user.addresses.new(params[:address])
     if @address.save
-      redirect_to root_path, :notice => new_string("adres.")
+      redirect_to root_path, :notice => t("flash.new", item: t("controller.address"))
     else
       render :action => 'new'
     end
@@ -27,7 +27,7 @@ class AddressesController < ApplicationController
   def update
     @address = current_user.addresses.find(params[:id])
     if @address.update_attributes(params[:address])
-      redirect_to root_path, :notice  => edit_string("adres.")
+      redirect_to root_path, :notice  => t("flash.edit", item: t("controller.address"))
     else
       render :action => 'edit'
     end
@@ -36,6 +36,6 @@ class AddressesController < ApplicationController
   def destroy
     @address = current_user.addresses.find(params[:id])
     @address.destroy
-    redirect_to addresses_url, :notice => destroy_string("adres.")
+    redirect_to addresses_url, :notice => t("flash.delete", item: t("controller.address"))
   end
 end

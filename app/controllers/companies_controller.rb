@@ -12,7 +12,7 @@ class CompaniesController < OnlyAdminController
 	def create
 		@company = Company.new(params[:company])
 		if @company.save
-			redirect_to root_path, notice: new_string("markę samochodu")
+			redirect_to root_path, notice: t("flash.new", item: t("controller.company"))
 		else
 			render action: 'new'
 		end
@@ -25,7 +25,7 @@ class CompaniesController < OnlyAdminController
 	def update
 		@company = Company.find(params[:id])
 		if @company.update_attributes(params[:company])
-			redirect_to root_path, notice: edit_string("markę samochodu")
+			redirect_to root_path, notice: t("flash.edit", item: t("controller.company"))
 		else
 			render action: 'edit'
 		end
@@ -34,6 +34,6 @@ class CompaniesController < OnlyAdminController
 	def destroy
 		@company = Company.find(params[:id])
 		@company.destroy
-		redirect_to companies_url, notice: destroy_string("markę samochodu")
+		redirect_to companies_url, notice: t("flash.delete", item: t("controller.company"))
 	end
 end

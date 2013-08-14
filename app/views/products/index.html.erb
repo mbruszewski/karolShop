@@ -1,11 +1,11 @@
-<% provide(:title, "Wszystkie produkty") %>
+<% provide(:title, t("pages.admin_options.all_products")) %>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Stock</th>
+    <th><%= t("name") %></th>
+    <th><%= t("price.description") %></th>
+    <th><%= t("product.price") %></th>
+    <th><%= t("product.stock") %></th>
   </tr>
   <% for product in @products %>
     <tr>
@@ -14,9 +14,9 @@
       <td><%= product.price %></td>
       <td><%= product.stock %></td>
 
-      <td><%= link_to "Show", product %></td>
-      <td><%= link_to "Edit", edit_product_path(product) %></td>
-      <td><%= link_to "Destroy", product, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t("show"), product %></td>
+      <td><%= link_to t("edit"), edit_product_path(product) %></td>
+      <td><%= link_to t("delete"), product, :confirm => t("confirmation"), :method => :delete %></td>
     </tr>
   <% end %>
 </table>

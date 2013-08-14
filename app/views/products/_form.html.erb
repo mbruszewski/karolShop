@@ -1,20 +1,20 @@
 <%= form_for @product do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :name, t("name") %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :description %><br />
+    <%= f.label :description, t("product.description") %><br />
     <%= f.text_area :description %>
   </p>
   <p>
-    <%= f.label :price %><br />
+    <%= f.label :price, t("product.price") %><br />
     <%= f.text_field :price %>
   </p>
   <p>
-    <%= f.label :stock %><br />
+    <%= f.label :stock, t("product.stock") %><br />
     <%= f.number_field :stock %>
   </p>
-  <p><%= f.submit, class: "btn btn-large btn-primary" %></p>
+  <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
 <% end %>

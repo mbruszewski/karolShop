@@ -13,7 +13,7 @@ class OrderItemsController < ApplicationController
 	def create
 		@orderItem = OrderItem.new(params[:orderitems])
 		if @orderItem.save
-			redirect_to root_path, notice: new_string("produkt do listy.")
+			redirect_to root_path, notice: t("flash.new", item: t("controller.add_order_item"))
 		else
 			render action: 'new'
 		end
@@ -26,7 +26,7 @@ class OrderItemsController < ApplicationController
 	def update
 		@orderItem = OrderItems.find(params[:id])
 		if @orderItem.update_attributes(params[:orderItem])
-			redirect_to root_path, notice: edit_string("produkt z listy.")
+			redirect_to root_path, notice: t("flash.edit", item: t("controller.order_item"))
 		else
 			render action: 'edit'
 		end
@@ -35,7 +35,7 @@ class OrderItemsController < ApplicationController
 	def destroy
 		@orderItem = OrderItem.find(params[:id])
 		@orderItem.destroy
-		redirect_to orders_url, notice: destroy_string("produkt z listy.")
+		redirect_to orders_url, notice: t("flash.delete", item: t("controller.order_item"))
 	end
 
 

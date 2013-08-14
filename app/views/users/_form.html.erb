@@ -1,22 +1,22 @@
 <%= form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :login, "Login (e-mail)" %><br />
+    <%= f.label :login, t("user.login") %><br />
 
-		<% if yield(:title) == "Edycja użytkownika" %>
- 	   	<%= f.text_field :login, disabled: true %>
+		<% if yield(:title) == t("provide.edit", item: t("model.user")) %>
+ 	   	<%= f.text_field :login , disabled: true %>
 		<% else %>
-			<%= f.text_field :login%>
+			<%= f.text_field :login %>
 		<% end %>
 
   </p>
   <p>
-    <%= f.label :password, "Hasło" %><br />
+    <%= f.label :password, t("user.password") %><br />
     <%= f.password_field :password %>
   </p>
 	<p>
-    <%= f.label :password_confirmation, "Potwierdź hasło" %><br />
+    <%= f.label :password_confirmation, t("user.password_confirmation") %><br />
     <%= f.password_field :password_confirmation %>
   </p>
-  <p><%= f.submit "Zatwierdź", class: "btn btn-large btn-primary" %></p>
+  <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
 <% end %>

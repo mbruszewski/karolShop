@@ -1,8 +1,4 @@
-<% provide(:title, "Edytuj produkt") %>
+<% provide(:title, t("provide.edit", item: t("model.product"))) %>
 
 <%= render 'form' %>
 
-<p>
-  <%= link_to "Show", @product %> |
-  <%= link_to "View All", products_path %>
-</p>

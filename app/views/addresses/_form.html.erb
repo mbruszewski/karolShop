@@ -1,16 +1,16 @@
 <%= form_for @address do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :city, "Miasto" %><br />
+    <%= f.label :city, t("address.city") %><br />
     <%= f.text_field :city %>
   </p>
   <p>
-    <%= f.label :street_and_number, "Ulica i nr domu" %><br />
+    <%= f.label :street_and_number, t("address.street") %><br />
     <%= f.text_field :street_and_number %>
   </p>
   <p>
-    <%= f.label :post_code, "Kod pocztowy" %><br />
+    <%= f.label :post_code, t("address.post_code") %><br />
     <%= f.number_field :post_code %>
   </p>
-  <p><%= f.submit "Zatwierdź" %></p>
+  <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
 <% end %>

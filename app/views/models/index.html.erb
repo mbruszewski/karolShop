@@ -1,0 +1,15 @@
+<% provide(:title, t("pages.admin_options.all_models")) %>
+
+<table>
+  <tr>Nazwa producenta</tr>
+  <tr>Nazwa modelu</tr>
+  <% for model in @models %>
+    <tr>
+      <td><%= model.company.name %></td>
+      <td><%= model.name %></td>
+      <td><%= link_to t("edit"), edit_model_path(model) %></td>
+      <td><%= link_to t("delete"), model, confirm: t("confirmation"), method: :delete %></td>
+    </tr>
+  <% end %>
+
+</table>

@@ -3,3 +3,93 @@
 
 en:
   hello: "Hello world"
+
+  pages:
+    main_page: "Main page"
+    log_out: "Log out"
+    log_in: "Log in"
+    register: "Register"
+    user_settings:
+      index: "Users settings"
+      edit_profile: "Edit profile"
+      your_addresses: "Your addresses"
+      add_new_address: "Add new address"
+      orders: "Orders"
+    admin_options:
+      index: "Admin options"
+      all_companies: "All car companies"
+      new_company: "Add new car company"
+      all_models: "All car models"
+      new_model: "New car model"
+      all_versions: "All car versions"
+      new_version: "New car model"
+      all_brands: "All brands"
+      new_brand: "New brand"
+      all_categories: "All categories"
+      new_category: "New category"
+      all_products: "All products"
+      new_product: "New product"
+    
+
+  flash:
+    new: "Succesfully added %{item}!"
+    edit: "Succesfully edited %{item}!"
+    delete: "Succesfully deleted %{item}!"
+
+  controller:
+    address: "adres"
+    user: "użytkownika"
+    brand: "firmę"
+    category: "kategorię"
+    company: "markę samochodu"
+    model: "model samochodu"
+    product: "produkt"
+    version: "wersję samochodu"
+    add_order_item: "dodano do listy."
+    order_item: "usunięto z listy."
+
+  provide:
+    new: "New %{item}"
+    edit: "Edit %{item}"
+    show: "Show %{item}"
+    index: "All %{item}"
+
+  edit: "Edit"
+  delete: "Delete"
+  show: "Show"
+  index: "View all"
+
+  name: "Name"
+  submit: "Submit"
+  confirmation: "Are you sure?"
+  image_url: "Image Url"
+  registration: "Register"
+
+  model:
+    address: "Address"
+    user: "User"
+    brand: "Brand"
+    category: "Category"
+    company: "Company"
+    model: "Model"
+    product: "Product"
+    version: "Version"
+
+  user:
+    login: "Login"
+    password: "Password"
+    password_confirmation: "Password confirmation"
+
+  address:
+    city: "City"
+    street: "Street"
+    post_code: "Post code"
+
+  product:
+    description: "Description"
+    price: "Price"
+    stock: "Stock"
+
+  item:
+    price: "Price"
+    count: "Count"

@@ -1,15 +1,15 @@
-<% provide(:title, "Wszystkie kategorie") %>
+<% provide(:title, t("pages.admin_options.all_categories")) %>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th><%= t("name") %></th>
   </tr>
   <% for category in @categories %>
     <tr>
       <td><%= category.name %></td>
-      <td><%= link_to "Show", category %></td>
-      <td><%= link_to "Edit", edit_category_path(category) %></td>
-      <td><%= link_to "Destroy", category, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t("show"), category %></td>
+      <td><%= link_to t("edit"), edit_category_path(category) %></td>
+      <td><%= link_to t("delete"), category, :confirm => t("confirmation"), :method => :delete %></td>
     </tr>
   <% end %>
 </table>

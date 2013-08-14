@@ -3,9 +3,10 @@
 # encoding: utf-8
 
 class ApplicationController < ActionController::Base
-  	protect_from_forgery
+  protect_from_forgery
 	helper_method :current_user
 	
+  before_filter :set_default_language
 
 	def load_order
 		@order = Order.find_or_initialize_by_id(session[:order_id], status: "nowy", user: current_user)
@@ -15,23 +16,12 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-	
-	def new_string(string)
-		return "Pomyślnie dodano " + string
-	end
-
-	def edit_string(string)
-		return "Pomyślnie edytowano " + string
-	end
-
-	def destroy(string)
-		return "Pomyślnie usunięto " + string
-	end
-	
-
-
-
 	private
+    def set_default_language
+      I18n.default_locale = 'pl'
+      I18n.locale = cookies[:language] if cookies[:language]
+    end
+
 		def current_user
 		  @current_user ||= User.find(session[:user_id]) if session[:user_id]
 		end
@@ -49,8 +39,7 @@ class ApplicationController < ActionController::Base
 		end
 
 		def admin_user
-			logged_in_user
-			if !current_user.admin
+			if current_user == nil || !current_user.admin
 				redirect_to root_path
 			end
 		end

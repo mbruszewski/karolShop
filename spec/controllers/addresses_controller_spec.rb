@@ -2,9 +2,8 @@ require 'spec_helper'
 
 describe AddressesController do
 
-  before { sign_in }
-
+  let(:user) { FactoryGirl.create(:user) }
   
+  before { sign_in(user) }
 
-    
 end

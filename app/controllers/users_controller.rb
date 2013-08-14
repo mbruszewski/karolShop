@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 	  @user = User.new(params[:user])
 	  if @user.save
 			session[:user_id] = @user
-	    redirect_to root_path, :notice => new_string("użytkownika.")
+	    redirect_to root_path, :notice => t("flash.new", item: t("controller.user"))
 	  else
 	    render :action => 'new'
 	  end
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 		if params[:id] == current_user || current_user.admin
 		  @user = User.find(params[:id])
 		  if @user.update_attributes(params[:user])
-		    redirect_to root_path, :notice  => edit_string("użytkownika.")
+		    redirect_to root_path, :notice  => t("flash.edit", item: t("controller.user"))
 		  else
 		    render :action => 'edit'
 		  end
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
 		if params[:id] == current_user || current_user.admin
 		  @user = User.find(params[:id])
 		  @user.destroy
-		  redirect_to root_path, :notice => destroy_string("użytkownika.")
+		  redirect_to root_path, :notice => t("flash.delete", item: t("controller.user"))
 		else
 			redirect_to root_path
 		end

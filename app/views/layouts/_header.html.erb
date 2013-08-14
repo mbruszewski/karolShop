@@ -1,6 +1,6 @@
 <div class="header">
 	<div class="item">
-		<%= link_to "Strona główna", root_path %>
+		<%= link_to t("pages.main_page"), root_path %>
 	</div>
 
 	<%= render "header/normal_user" %>
@@ -8,14 +8,14 @@
 
 	<% if current_user.nil? %>
 		<div class="item">
-			<%= link_to "Zaloguj sie", login_path %>
+			<%= link_to t("pages.log_in"), login_path %>
 		</div>
 		<div class="item">
-			<%= link_to "Zarejestruj sie", users_path + "/new" %>
+			<%= link_to t("pages.register"), new_user_path %>
 		</div>
 	<% else %>
 		<div class="item">
-			<%= link_to "Wyloguj sie", logout_path %>
+			<%= link_to t("pages.log_out"), logout_path %>
 		</div>
 	<% end %>
 		

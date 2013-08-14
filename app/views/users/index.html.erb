@@ -1,9 +1,9 @@
-<% provide(:title, "Użytkownicy")
+<% provide(:title, t("pages.admin_options.all_users"))
 
 <table>
   <tr>
-    <th>Login</th>
-    <th>Password</th>
+    <th><%= t("user.login") %></th>
+    <th><%= t("user.password")</th>
     <th>Admin?</th>
   </tr>
   <% for user in @users %>
@@ -11,9 +11,9 @@
       <td><%= user.login %></td>
       <td><%= user.password %></td>
       <td><%= user.admin %></td>
-      <td><%= link_to "Show", user %></td>
-      <td><%= link_to "Edit", edit_user_path(user) %></td>
-      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t("show"), user %></td>
+      <td><%= link_to t("edit"), edit_user_path(user) %></td>
+      <td><%= link_to t("delete"), user, :confirm => t("confirmation"), :method => :delete %></td>
     </tr>
   <% end %>
 </table>

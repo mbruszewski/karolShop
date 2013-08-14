@@ -12,7 +12,7 @@ class BrandsController < OnlyAdminController
 	def create
 		@brand = Brand.new(params[:brand])	
 		if @brand.save()
-			redirect_to root_path, notice: new_string("firmę.")
+			redirect_to root_path, notice: t("flash.new", item: t("controller.brand"))
 		else	
 			render action: 'new'
 		end
@@ -25,7 +25,7 @@ class BrandsController < OnlyAdminController
 	def update 
 		@brand = Brand.find(params[:id])
 		if @brand.update_attributes(params[:address])
-			redirect_to root_path, notice: edit_string("firmę.")
+			redirect_to root_path, notice: t("flash.edit", item: t("controller.brand"))
 		else
 			render action: "edit"
 		end
@@ -34,6 +34,6 @@ class BrandsController < OnlyAdminController
 	def destroy
 		@brand = Brand.find(params[:id])
 		@brand.destroy
-		redirect_to brands_url, notice: destroy_string("firmę.")
+		redirect_to brands_url, notice: t("flash.delete", item: t("controller.brand"))
 	end
 end

@@ -1,13 +1,13 @@
 # -*- encoding : utf-8 -*-
 FactoryGirl.define do
-  	factory :user do
-    	sequence(:login) { |n| "person_#{n}@example.com" }    
-    	password "foobar"
-    	password_confirmation "foobar"
+  factory :user do
+    sequence(:login) { |n| "person_#{n}@example.com" }    
+    password "foobar"
+    password_confirmation "foobar"
 
-    	factory :admin do
-     		admin true
-    	end
+    factory :admin do
+     	admin true
+    end
 	end
 
 	factory :address do

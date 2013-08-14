@@ -1,4 +1,4 @@
-<% provide(:title, "Kategoria") %>
+<% provide(:title, t("provide.show", item: t("model.category"))) %>
 
 <p>
   <strong>Name:</strong>
@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_category_path(@category) %> |
-  <%= link_to "Destroy", @category, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", categories_path %>
+  <%= link_to t("edit"), edit_category_path(@category) %> |
+  <%= link_to t("delete"), @category, :confirm => t("confirmation"), :method => :delete %> |
+  <%= link_to t("index"), categories_path %>
 </p>

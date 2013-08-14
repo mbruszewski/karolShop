@@ -1,9 +1,13 @@
 <%= form_for @version do |f| %>
 	<%= f.error_messages %>
 	<p>
-		<%= f.label :name %>
+		<%= f.label :name, t("name") %>
 		<%= f.text_field :name %>
-	</p>
-	<p><%= f.submit, class: "btn btn-large btn-primary" %>
+  </p>
+  <p>
+    <%= f.label :model_id, t("model.model") %>
+    <%= f.select(:model_id, Model.all.collect { |p| [p.name, p.id] }) %>
+  </p>
+	<p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %>
 <% end %>
 

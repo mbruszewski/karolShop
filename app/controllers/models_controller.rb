@@ -11,9 +11,9 @@ class ModelsController < OnlyAdminController
 	end
 	
 	def create
-		@model = Model.new
+		@model = Model.new(params[:model])
 		if @model.save
-			redirect_to root_path, notice: new_string("model samochodu.")
+			redirect_to root_path, notice: t("flash.new", item: t("controller.model"))
 		else
 			render action: 'new'
 		end
@@ -26,14 +26,14 @@ class ModelsController < OnlyAdminController
 	def update
 		@model = Model.find(params[:id])
 		if @model.update_attributes(params[:id])
-			redirect_to root_path, notice: edit_string("model samochodu.")
+			redirect_to root_path, notice: t("flash.edit", item: t("controller.model"))
 		end
 	end
 
 	def destroy
 		@model = Model.find(params[:id])
 		@model.destroy
-		redirect_to models_url, notice: destroy_string("model samochodu.")
+		redirect_to models_url, notice: t("flash.delete", item: t("controller.model"))
 	end
 
 

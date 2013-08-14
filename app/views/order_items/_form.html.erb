@@ -1,16 +1,16 @@
 <%= form_for @order_item do |f| %>
 	<%= f.error_messages %>
 	<p>
-		<%= f.label :name %>
+		<%= f.label :name, t("name") %>
 		<%= f.text_field :name %>
 	</p>
 	<p>
-		<%= f.label :price %>
+		<%= f.label :price, t("item.price") %>
 		<%= f.text_field :price %>
 	</p>
 	<p>
-		<%= f.label :count %>
+		<%= f.label :count, t("item.count") %>
 		<%= f.text_field :count %>
 	</p>
-	<p><%= f.submit %></p>
+	<p><%= f.submit t("submit") %></p>
 <% end %>

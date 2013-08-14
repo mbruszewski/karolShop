@@ -12,7 +12,7 @@ class VersionsController < OnlyAdminController
 	def update
 		@version = Version.find(params[:id])
 		if @version.update_attributes(params[:version])
-			redirect_to root_path, notice: edit_string("wersje samochodu.")
+			redirect_to root_path, notice: t("flash.edit", item: t("controller.version"))
 		else
 			render action: 'edit'
 		end	
@@ -25,7 +25,7 @@ class VersionsController < OnlyAdminController
 	def create
 		@version = Version.new(params[:version])
 		if @version.save
-			redirect_to root_path, new_string("wersje samochodu.")
+			redirect_to root_path, notice: t("flash.new", item: t("controller.version"))
 		else
 			render action: 'new'
 		end
@@ -34,7 +34,7 @@ class VersionsController < OnlyAdminController
 	def destroy
 		@version = Version.find(params[:id])
 		@version.destroy
-		redirect_to versions_url, notice: destroy_string("wersje samochodu.")
+		redirect_to versions_url, notice: t("flash.delete", item: t("controller.version"))
 	end
 
 

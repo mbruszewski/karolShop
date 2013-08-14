@@ -1,12 +1,12 @@
-<% provide(:title, "Wszystkie marki samochodów") %>
+<% provide(:title, t("pages.admin_options.all_companies")) %>
 
 <table>
-  <tr>Nazwa</tr>
+  <tr><%= t("name") %></tr>
   <% for company in @companies %>
     <tr>
-      <td>company.name</td>
-      <td><%= link_to "Edytuj", edit_company_path(company) %></td>
-      <td><%= link_to "Usuń", company, confirm: "Jesteś tego pewny?", method: :delete %></td>
+      <td><%= company.name %></td>
+      <td><%= link_to t("edit"), edit_company_path(company) %></td>
+      <td><%= link_to t("delete"), company, confirm: t("confirmation"), method: :delete %></td>
     </tr>
   <% end %>
 

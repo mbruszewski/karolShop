@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
-      redirect_to @product, :notice => new_string("produkt.")
+      redirect_to @product, :notice => t("flash.new", item: t("controller.product"))
     else
       render :action => 'new'
     end
@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update_attributes(params[:product])
-      redirect_to @product, :notice  => edit_string("produkt.")
+      redirect_to @product, :notice  => t("flash.edit", item: t("controller.product"))
     else
       render :action => 'edit'
     end
@@ -37,6 +37,6 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to products_url, :notice => destroy_string("produkt.")
+    redirect_to products_url, :notice => t("flash.delete", item: t("controller.product"))
   end
 end

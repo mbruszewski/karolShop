@@ -1,0 +1,93 @@
+
+pl:
+  hello: "Hello world"
+
+  pages:
+    main_page: "Strona główna"
+    log_out: "Wyloguj"
+    log_in: "Zaloguj"
+    register: "Rejestracja"
+    user_settings:
+      index: "Ustawienia użytkownika"
+      edit_profile: "Edycja profilu"
+      your_addresses: "Twoje adresy"
+      add_new_address: "Dodaj nowy adres"
+      orders: "Zamówienia"
+    admin_options:
+      index: "Opcje admina"
+      all_companies: "Wszystkie marki samochodów"
+      new_company: "Nowa marka samochodu"
+      all_models: "Wszystkie modele samochodów"
+      new_model: "Nowy model samochodu"
+      all_versions: "Wszystkie wersje samochodów"
+      new_version: "Nowa wersja samochodu"
+      all_brands: "Wszystkie firmy"
+      new_brand: "Nowa firma"
+      all_categories: "Wszystkie kategorie produktu"
+      new_category: "Nowa kategoria produktu"
+      all_products: "Wszystkie produkty"
+      new_product: "Nowy produkt"
+
+  flash:
+    new: "Pomyślnie dodano %{item}!"
+    edit: "Pomyślnie edytowano %{item}!"
+    delete: "Pomyślnie usunięto %{item}!"
+
+  controller:
+    address: "adres"
+    user: "użytkownika"
+    brand: "firmę"
+    category: "kategorię"
+    company: "markę samochodu"
+    model: "model samochodu"
+    product: "produkt"
+    version: "wersję samochodu"
+    add_order_item: "dodano do listy"
+    order_item: "usunięto z listy"
+
+  provide:
+    new: "Nowy %{item}"
+    edit: "Edycja %{item}"
+    show: "Pokaż %{item}"
+    index: "Wszyscy %{item}"
+
+  edit: "Edytuj"
+  delete: "Usuń"
+  show: "Pokaż"
+  index: "Pokaż wszystkie"
+
+  name: "Nazwa"
+  submit: "Zatwierdź"
+  confirmation: "Jesteś pewien?"
+  image_url: "Url obrazka"
+  registration: "Rejestracja"
+
+  model:
+    address: "Adres"
+    user: "Użytkownik"
+    brand: "Firma"
+    category: "Kategoria"
+    company: "Marka samochodu"
+    model: "Model samochodu"
+    product: "Produkt"
+    version: "Wersja samochodu"
+
+  user:
+    login: "Login"
+    password: "Hasło"
+    password_confirmation: "Potwierdzenie hasła"
+
+  address:
+    city: "Miasto"
+    street: "Ulica i nr domu"
+    post_code: "Kod pocztowy"
+
+  product:
+    description: "Opis produktu"
+    price: "Cena"
+    stock: "Ilość w sklepie"
+
+  item:
+    price: "Cena"
+    count: "Ilość"
+

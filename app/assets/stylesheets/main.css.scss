@@ -9,6 +9,19 @@ body {
 	background: radial-gradient(circle, $background1, $background2);
 }
 
-div.title {
-	color: orange;
+.title {
+  text-align: center; 
+  color: black;
+}
+
+.nationalization {
+  text-align: right;
+}
+
+#top_image {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
 }

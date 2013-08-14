@@ -8,16 +8,27 @@
     <%= yield(:head) %>
   </head>
   <body>
-		<%= render "layouts/header" %>
-    <div class="container-fluid">
-  	  <div class="row-fluid">
-  		  <div class="span2 offset2">
-  			  <%= render "layouts/left_column" %>
-		   	</div>
-  			<div class="span5 offset1">
-    			<%= render "layouts/right_column" %>
-    		</div>
-    	</div>
-    </div>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      <div id=top_image>
+        <%= image_tag 'http://img10.imageshack.us/img10/290/xvjs.jpg' %>
+      </div>
+      <%= render "layouts/header" %>
+      <br/>
+      <div class="nationalization">
+          <%= link_to image_tag('polish.jpeg', size: "40x60"), action: 'polish', controller: 'languages' %>
+          <%= link_to image_tag('english.jpg', size: "40x60"), action: 'english', controller: 'languages' %> 
+      </div>
+      <br/>
+	    <div class="title">
+ 	 	    <%= content_tag :h1, yield(:title) %>
+      </div>
+      <br/>
+      <div class="center">
+        <%= yield %>
+      </div>
+    </div> 
   </body>
 </html>

@@ -1,12 +1,12 @@
 <%= form_for @company do |f| %>
   	<%= f.error_messages %>
   	<p>
-    	<%= f.label :name %><br />
+    	<%= f.label :name, t("name") %><br />
     	<%= f.text_field :name %>
   	</p>
 	<p>
-		<%= f.label :image_url %><br/>
+		<%= f.label :image_url, t("image_url") %><br/>
 		<%= f.text_field :image_url %><br/>
 	</p>
-  	<p><%= f.submit "Zatwierdź" , class: "btn btn-large btn-primary" %></p>
+  	<p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
 <% end %>

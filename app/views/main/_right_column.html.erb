@@ -1,0 +1,32 @@
+
+<table>
+  <% for product in @products %>
+    <div class="product">
+      <div class="product_image">
+        <%= image_tag 'http://www.maksymilian.sleziak.com/wp-content/uploads/2009-and-older/zdjecie_konkursowe.jpg', size: "300x300" %>
+      </div>
+      <div class="product_right">
+        <div class="product_title">
+          <%= product.name %>
+        </div>
+
+        <div class="horizontal-line"></div>
+
+        <div class="product_description">
+          <%= product.description %>
+        </div>
+
+        <div class="horizontal-line"></div>
+
+        <div class="price">
+          <%= t("product.price") + ": " + print_price(product.price) %>
+        </div>
+
+        <div class="stock">
+          <%= t("product.stock") + ": " + print_stock(product.stock) %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</table>
