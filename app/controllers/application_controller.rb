@@ -18,8 +18,7 @@ class ApplicationController < ActionController::Base
 
 	private
     def set_default_language
-      I18n.default_locale = 'pl'
-      I18n.locale = cookies[:language] if cookies[:language]
+      I18n.locale = cookies[:language] ? cookies[:language] : 'pl'
     end
 
 		def current_user
