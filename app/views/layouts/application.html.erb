@@ -9,9 +9,6 @@
   </head>
   <body>
     <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
       <div id=top_image>
         <%= image_tag 'http://img10.imageshack.us/img10/290/xvjs.jpg' %>
       </div>
@@ -21,7 +18,9 @@
           <%= link_to image_tag('polish.jpeg', size: "40x60"), action: 'polish', controller: 'languages' %>
           <%= link_to image_tag('english.jpg', size: "40x60"), action: 'english', controller: 'languages' %> 
       </div>
-      <br/>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
 	    <div class="title">
  	 	    <%= content_tag :h1, yield(:title) %>
       </div>
