@@ -1,6 +1,0 @@
-
-	<%= link_to "Zarejestruj sie", users_path + "/new" %>
-
-<div class="item">
-	<%= link_to "Zaloguj sie", login_path %>
-</div>
