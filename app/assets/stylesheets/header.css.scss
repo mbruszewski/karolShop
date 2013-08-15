@@ -1,6 +1,12 @@
 $header: linear-gradient(to left, black 50%);
-$hover: url('hover.png') repeat-x;
-$black: rgba(16,16,16,0.01);
+$hover: url('hover.png') repeat-x scroll 0 0 transparent;
+$black: rgba(16,16,16,0.95);
+
+@mixin buttons {
+  color: white;
+  background: $hover;
+  text-decoration: none;
+}
 
 div.header{
   background-image: url('background_color.jpg');
@@ -10,6 +16,10 @@ div.header{
 	text-align: center;
   border-style: linear-gradient(to left, $black, white, $black);
   border-width: 1px;
+
+  span {
+    @include buttons
+  }
 }
 
 .item{
@@ -21,9 +31,7 @@ div.header{
 }
 
 .item:hover {
-	color: white;
-	background: $hover;
-  text-decoration: none;
+  @include buttons
 }
 
 a {
@@ -33,9 +41,7 @@ a {
 }
 
 a:hover {
-	color: white;
-	background: $hover;
-  text-decoration: none;
+  @include buttons
 }
 
 .header_line {

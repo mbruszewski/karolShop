@@ -13,7 +13,7 @@ KarolShop::Application.routes.draw do
 	resources :models	
 	resources :companies
 	resources :brands
-
+  resources :offert
   
 
 	root to: "main#index"

@@ -13,15 +13,16 @@
           <%= link_to image_tag('polish.jpeg', size: "30x45"), action: 'polish', controller: 'languages' %>
           <%= link_to image_tag('english.jpg', size: "30x45"), action: 'english', controller: 'languages' %> 
       </div>
-      <div id=top_image>
+      <div id="top_image">
         <%= image_tag 'http://img10.imageshack.us/img10/290/xvjs.jpg' %>
       </div>
+      <br/>
       <%= render "layouts/header" %>
       <br/>
 
       <div class="container-fluid">
         <div class="row-fluid">
-          <div class="span6 offset3">
+          <div class="span8 offset2">
             <% flash.each do |name, msg| %>
               <%= content_tag :div, msg, :id => "flash_#{name}" %>
             <% end %>

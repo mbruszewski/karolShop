@@ -5,6 +5,7 @@ en:
   hello: "Hello world"
 
   pages:
+    offert_page: "Offert"
     main_page: "Main page"
     log_out: "Log out"
     log_in: "Log in"

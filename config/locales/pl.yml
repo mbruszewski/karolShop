@@ -3,6 +3,7 @@ pl:
   hello: "Hello world"
 
   pages:
+    offert_page: "Oferta"
     main_page: "Strona główna"
     log_out: "Wyloguj"
     log_in: "Zaloguj"
