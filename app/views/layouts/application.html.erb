@@ -9,15 +9,15 @@
   </head>
   <body>
     <div id="container">
+      <div class="nationalization">
+          <%= link_to image_tag('polish.jpeg', size: "30x45"), action: 'polish', controller: 'languages' %>
+          <%= link_to image_tag('english.jpg', size: "30x45"), action: 'english', controller: 'languages' %> 
+      </div>
       <div id=top_image>
         <%= image_tag 'http://img10.imageshack.us/img10/290/xvjs.jpg' %>
       </div>
       <%= render "layouts/header" %>
       <br/>
-      <div class="nationalization">
-          <%= link_to image_tag('polish.jpeg', size: "40x60"), action: 'polish', controller: 'languages' %>
-          <%= link_to image_tag('english.jpg', size: "40x60"), action: 'english', controller: 'languages' %> 
-      </div>
 
       <div class="container-fluid">
         <div class="row-fluid">

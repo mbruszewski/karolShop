@@ -1,6 +1,6 @@
 $header: linear-gradient(to left, black 50%);
 $hover: url('hover.png') repeat-x;
-
+$black: rgba(16,16,16,0.01);
 
 div.header{
   background-image: url('background_color.jpg');
@@ -8,7 +8,7 @@ div.header{
 	font-size: 15px;
 	height: 30px;
 	text-align: center;
-  border-style: linear-gradient(to left, black, white, black);
+  border-style: linear-gradient(to left, $black, white, $black);
   border-width: 1px;
 }
 
@@ -18,7 +18,6 @@ div.header{
 	float: center;
   color: white;
   text-decoration: none;
-  margin: 0px 5px;
 }
 
 .item:hover {
