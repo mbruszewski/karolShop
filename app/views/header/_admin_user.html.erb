@@ -1,5 +1,5 @@
 <% if current_user != nil && current_user.admin %>
-	<div class="item">
+  <div class="item">
 		<div class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <%= t("pages.admin_options.index") %>
@@ -18,8 +18,7 @@
 				<%= render "header/admin/categories" %>
 				<li class="divider"></li>			
 				<%= render "header/admin/products" %>
-
 			</ul>
-		</div>
-	</div>
+    </div>
+  </div>
 <% end %>

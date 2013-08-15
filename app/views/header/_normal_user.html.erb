@@ -1,18 +1,17 @@
 <% if current_user != nil %>
-	<div class="item">
-		<div class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <%= t("pages.user_settings.index") %>
+  <div class="item">
+    <div class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <%= t("pages.user_settings.index") %>
 			<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu" role="menu" aria-labelleby="dropdownMenu">
-			
 				<%= render "header/not_admin/users" %>
 				<li class="divider"></li>		
         <%= render "header/not_admin/addresses" %>
         <li class="divider"></li>
         <%= render "header/not_admin/orders" %> 
 			</ul>
-		</div>
-	</div>
+    </div>
+  </div>
 <% end %>

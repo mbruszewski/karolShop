@@ -1,35 +1,45 @@
-$header: black;
+$header: linear-gradient(to left, black 50%);
+$hover: url('hover.png') repeat-x;
 
 
 div.header{
+  background-image: url('background_color.jpg');
 	background: $header;
 	font-size: 15px;
-	height: 40px;
-	text-align: left;
+	height: 30px;
+	text-align: center;
+  border-style: linear-gradient(to left, black, white, black);
+  border-width: 1px;
 }
 
-div.item{
-	padding: 10px;
-	border-style: solid;
-	border-color: white;
-	float: left;
-	border-width: 1px;
-	border-top: 0px;
-	border-bottom: 0px;
-	border-left: 0px;
+.item{
+  display: inline-block;
+  padding: 5px 2px;
+	float: center;
+  color: white;
+  text-decoration: none;
+  margin: 0px 5px;
 }
 
-div.item :hover {
-	color: black;
-	background: white;
+.item:hover {
+	color: white;
+	background: $hover;
+  text-decoration: none;
 }
 
 a {
+  padding: 5px 1px;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
 	color: white;
-	text-decoration: none;
+	background: $hover;
+  text-decoration: none;
 }
 
-a :hover {
-	text-decoration: none;
+.header_line {
+  height: 1px;
+  background: linear-gradient(to right, black 5%, white 50%, black 95%);
 }
-

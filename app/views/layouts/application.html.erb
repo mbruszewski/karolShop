@@ -18,14 +18,23 @@
           <%= link_to image_tag('polish.jpeg', size: "40x60"), action: 'polish', controller: 'languages' %>
           <%= link_to image_tag('english.jpg', size: "40x60"), action: 'english', controller: 'languages' %> 
       </div>
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-	    <div class="title">
- 	 	    <%= content_tag :h1, yield(:title) %>
+
+      <div class="container-fluid">
+        <div class="row-fluid">
+          <div class="span6 offset3">
+            <% flash.each do |name, msg| %>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            <% end %>
+
+	          <div class="title">
+ 	 	          <%= content_tag :h1, yield(:title) %>
+            </div>
+            <br/>
+            <%= yield %>
+          </div>
+        </div>
       </div>
-      <br/>
-      <%= yield %>
+
     </div> 
   </body>
 </html>
