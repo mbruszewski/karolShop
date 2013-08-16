@@ -40,6 +40,11 @@ $txt_color: #504848;
   text-align: center;
   text-decoration: none;
 
+  a {
+    background: black;
+    text-decoration: none;
+  }
+
   .element {
     position: relative;
     margin: 0px auto;
