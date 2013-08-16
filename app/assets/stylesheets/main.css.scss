@@ -38,22 +38,13 @@ $txt_color: #504848;
   background: black;
   float: center;
   text-align: center;
-
-  a {
-    text-decoration: none;
-
-    &:hover{
-      color: white;
-    }
-  }
+  text-decoration: none;
 
   .element {
     position: relative;
     margin: 0px auto;
     background: $bg_color;
     color: $txt_color;
-    text-decoration: none;
-    
 
     .image {
       border-style: solid;

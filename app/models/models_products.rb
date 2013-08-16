@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ModelsProducts < ActiveRecord::Base
   attr_accessible :product_id, :model_id
 

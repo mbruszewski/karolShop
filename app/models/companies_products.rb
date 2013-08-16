@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CompaniesProducts < ActiveRecord::Base
   attr_accessible :company_id, :product_id
 

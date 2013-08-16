@@ -1,14 +1,6 @@
 # -*- encoding : utf-8 -*-
 module MainHelper
-
-  def print_price(price)
-    price = number_to_currency(price, unit: "")
-    price = price.to_s + "zł"
-    return price
+  def get_name(index)
+    @companies[index].name
   end
-
-  def print_stock(stock)
-    return stock.to_s
-  end
-
 end

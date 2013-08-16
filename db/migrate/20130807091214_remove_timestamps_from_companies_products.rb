@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveTimestampsFromCompaniesProducts < ActiveRecord::Migration
   def up
     remove_column :companies_products, :updated_at

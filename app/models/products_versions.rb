@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProductsVersions < ActiveRecord::Base
   attr_accessible :product_id, :version_id
 

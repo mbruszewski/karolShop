@@ -2,21 +2,21 @@
   <div class="container-fluid">
   <div class="row-fluid">
     <div class="span4">
-      <% 3.times do %>
+      <% @left_indexes.each do |i| %>
         <%= link_to(root_path) do %>
           <div class="element">
             <%= image_tag('mazda.jpg', class: 'image') %>
-            <p class="text"> Mazda </p>
+            <p class="text"> <%= get_name(i) %> </p>
           </div>
         <% end %>
       <% end %>
     </div>
     <div class="span4">
-      <% 3.times do %>
+      <% @right_indexes.each do |i| %>
         <%= link_to(root_path) do %>
           <div class="element">
             <%= image_tag('mazda.jpg', class: 'image') %>
-            <p class="text"> Mazda </p>
+            <p class="text"> <%= get_name(i) %> </p>
           </div>
         <% end %>
       <% end %>
