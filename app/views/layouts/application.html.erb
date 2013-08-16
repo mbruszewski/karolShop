@@ -23,9 +23,11 @@
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span8 offset2">
-            <% flash.each do |name, msg| %>
-              <%= content_tag :div, msg, :id => "flash_#{name}" %>
-            <% end %>
+            <div class="center">
+              <% flash.each do |name, msg| %>
+                <%= content_tag :div, msg, :id => "flash_#{name}" %>
+              <% end %>
+            </div>
 
 	          <div class="title">
  	 	          <%= content_tag :h1, yield(:title) %>
