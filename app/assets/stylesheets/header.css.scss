@@ -1,6 +1,6 @@
 $header: linear-gradient(to left, black 50%);
 $hover: url('hover.png') repeat-x scroll 0 0 transparent;
-$black: rgba(16,16,16,0.95);
+$black: rgba(16,16,16,0.1);
 
 @mixin buttons {
   color: white;
@@ -46,5 +46,5 @@ a:hover {
 
 .header_line {
   height: 1px;
-  background: linear-gradient(to right, black 5%, white 50%, black 95%);
+  background: linear-gradient(to right,black 5%, white 50%, black 95%);
 }

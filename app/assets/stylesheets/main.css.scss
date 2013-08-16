@@ -30,3 +30,32 @@ body {
 .center {
   text-align: center;
 }
+
+.main {
+  background: black;
+  float: center;
+  text-align: center;
+
+  .element {
+    background: #161515;
+
+    .image {
+      border-style: solid;
+      border-color: black;
+      border-bottom-width: 3px;
+
+    }
+
+    .text {
+      padding: 3px;
+      font-size: 20px;
+      color: #504848;
+    }
+  }
+
+}
+
+
+.main_text {
+  
+}
