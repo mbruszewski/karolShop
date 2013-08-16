@@ -1,36 +1,32 @@
 <div class="main">
-<div class="container-fluid">
+  <div class="container-fluid">
   <div class="row-fluid">
     <div class="span4">
-      <div class="element">
-        <%= image_tag 'mazda.jpg', class: 'image' %>
-        <%= label 'abc', 'mazda', class: 'text' %>
-      </div>
-      <div class="element">
-        <%= image_tag 'mazda.jpg', class: 'image' %>
-        <%= label 'abc', 'mazda', class: 'text' %>
-      </div>
-      <div class="element">
-        <%= image_tag 'mazda.jpg', class: 'image' %>
-        <%= label 'abc', 'mazda', class: 'text' %>
-      </div>
+      <% 3.times do %>
+        <%= link_to(root_path) do %>
+          <div class="element">
+            <%= image_tag('mazda.jpg', class: 'image') %>
+            <p class="text"> Mazda </p>
+          </div>
+        <% end %>
+      <% end %>
     </div>
     <div class="span4">
-      <div class="element">
-        <%= image_tag 'mazda.jpg', class: 'image' %>
-        <%= label 'abc', 'mazda', class: 'text' %>
-      </div>     
-      <div class="element">
-        <%= image_tag 'mazda.jpg', class: 'image' %>
-        <%= label 'abc', 'mazda', class: 'text' %>
-      </div>     
-      <div class="element">
-        <%= image_tag 'mazda.jpg', class: 'image' %>
-        <%= label 'abc', 'mazda', class: 'text' %>
-      </div>
+      <% 3.times do %>
+        <%= link_to(root_path) do %>
+          <div class="element">
+            <%= image_tag('mazda.jpg', class: 'image') %>
+            <p class="text"> Mazda </p>
+          </div>
+        <% end %>
+      <% end %>
     </div>
     <div class="span4">
+      <div class="regulamin">
+        <p class="header">Regulamin</p>
+        dupa jasia dupa dupa
+      </div>
     </div>
   </div>
-</div>
+  </div>
 </div>
