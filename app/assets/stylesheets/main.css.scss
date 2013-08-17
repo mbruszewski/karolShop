@@ -70,10 +70,14 @@ $txt_color: #504848;
 
   }
   .regulamin{
-    margin: 10px;
+    margin: 20px;
     .header {
       font-size: 28px;
+      margin-bottom: 20px;
       font-weight: bold;
+    }
+    .text {
+      margin-top: 10px;
     }
   }
 
