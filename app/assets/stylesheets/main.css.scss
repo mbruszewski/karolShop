@@ -37,7 +37,6 @@ $txt_color: #504848;
 .main {
   background: black;
   float: center;
-  text-align: center;
   text-decoration: none;
   width: 800px;
   display: in-line;
@@ -73,11 +72,13 @@ $txt_color: #504848;
     margin: 20px;
     .header {
       font-size: 28px;
-      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-bottom: 10px;
       font-weight: bold;
     }
     .text {
-      margin-top: 10px;
+      margin-top: 20px;
+      text-align: left;
     }
   }
 
