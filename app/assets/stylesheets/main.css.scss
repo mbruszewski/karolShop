@@ -29,7 +29,6 @@ body {
 
 $bg_color: #161515;
 $txt_color: #504848;
-$col_width: 100;
 
 .center {
   text-align: center;
@@ -40,8 +39,9 @@ $col_width: 100;
   float: center;
   text-align: center;
   text-decoration: none;
-  width: 600;  
+  width: 800px;
   display: in-line;
+
 
   a {
     background: black;
@@ -51,6 +51,7 @@ $col_width: 100;
   .element {
     background: $bg_color;
     color: $txt_color;
+    max-width: 200px;
 
     .image {
       border-style: solid;
