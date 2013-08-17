@@ -1,32 +1,35 @@
 <div class="main">
+
   <div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span4">
-      <% @left_indexes.each do |i| %>
-        <%= link_to(root_path) do %>
-          <div class="element">
-            <%= image_tag(get_url(i), class: 'image') %>
-            <p class="text"> <%= get_name(i) %> </p>
-          </div>
+    <div class="row-fluid">
+      <div class="span4">
+
+        <% @left_indexes.each do |i| %>
+          <%= link_to(root_path) do %>
+            <div class="element">
+              <%= image_tag(get_url(i), class: 'image') %>
+              <p class="text"> <%= get_name(i) %> </p>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-    <div class="span4">
-      <% @right_indexes.each do |i| %>
-        <%= link_to(root_path) do %>
-          <div class="element">
-            <%= image_tag(get_url(i), class: 'image') %>
-            <p class="text"> <%= get_name(i) %> </p>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="span4">
-      <div class="regulamin">
-        <p class="header">Regulamin</p>
-        dupa jasia dupa dupa
+
       </div>
-    </div>
-  </div>
+      <div class="span4">
+        <% @right_indexes.each do |i| %>
+          <%= link_to(root_path) do %>
+            <div class="element">
+              <%= image_tag(get_url(i), class: 'image') %>
+              <p class="text"> <%= get_name(i) %> </p>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="span4">
+        <div class="regulamin">
+          <p class="header">Regulamin</p>
+          dupa jasia dupa dupa
+        </div>
+      </div>
+    </div>  
   </div>
 </div>

@@ -29,6 +29,7 @@ body {
 
 $bg_color: #161515;
 $txt_color: #504848;
+$col_width: 100;
 
 .center {
   text-align: center;
@@ -39,6 +40,8 @@ $txt_color: #504848;
   float: center;
   text-align: center;
   text-decoration: none;
+  width: 600;  
+  display: in-line;
 
   a {
     background: black;
@@ -46,13 +49,10 @@ $txt_color: #504848;
   }
 
   .element {
-    position: relative;
-    margin: 0px auto;
     background: $bg_color;
     color: $txt_color;
 
     .image {
-      height: 170px;
       border-style: solid;
       border-color: black;
       border-bottom-width: 3px;
@@ -67,8 +67,8 @@ $txt_color: #504848;
       color: white;
       font-weight: bold;
     }
-  }
 
+  }
   .regulamin{
     margin: 10px;
     .header {
