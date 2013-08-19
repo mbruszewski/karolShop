@@ -14,10 +14,20 @@ body {
   font-family:Arial,Verdana;
 }
 
-.title {
-  text-align: center; 
-  color: #616271;
+.main-content {
+  background: black;
+  width: 800px;
+  
+  .title {
+    text-align: center; 
+    color: white;
+  }
+
+  .space {
+    height: 10px;
+  }
 }
+
 
 .nationalization {
   text-align: right;
@@ -48,7 +58,6 @@ $txt_color: #504848;
   }
 
   .element {
-    margin-top: 20px;
     background: $bg_color;
     color: $txt_color;
 
@@ -70,7 +79,6 @@ $txt_color: #504848;
 
   }
   .regulamin{
-    margin: 20px;
     .head {
       color: white;
       font-size: 28px;

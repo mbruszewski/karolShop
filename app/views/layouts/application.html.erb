@@ -8,32 +8,38 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="container">
+  <div id="container">
+
       <div class="nationalization">
-          <%= link_to image_tag('polish.jpeg', size: "30x45"), action: 'polish', controller: 'languages' %>
-          <%= link_to image_tag('english.jpg', size: "30x45"), action: 'english', controller: 'languages' %> 
+        <%= link_to image_tag('polish.jpeg', size: "30x45"), action: 'polish', controller: 'languages' %>
+        <%= link_to image_tag('english.jpg', size: "30x45"), action: 'english', controller: 'languages' %> 
       </div>
+
       <div id="top_image">
         <%= image_tag 'http://img10.imageshack.us/img10/290/xvjs.jpg' %>
       </div>
-      <br/>
+
       <%= render "layouts/header" %>
-      <br/>
 
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span8 offset2">
-            <div class="center">
-              <% flash.each do |name, msg| %>
-                <%= content_tag :div, msg, :id => "flash_#{name}" %>
-              <% end %>
-            </div>
+            <div class="main-content">
+              <div class="space"></div>
 
-	          <div class="title">
- 	 	          <%= content_tag :h1, yield(:title) %>
+              <center>
+                <% flash.each do |name, msg| %>
+                  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+                <% end %>
+              </center>
+
+              <div class="title">
+                <%= content_tag :h1, yield(:title) %>
+              </div>
+
+              <%= yield %>
+              <div class="space"></div>
             </div>
-            <br/>
-            <%= yield %>
           </div>
         </div>
       </div>
