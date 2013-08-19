@@ -28,6 +28,8 @@ pl:
       new_category: "Nowa kategoria produktu"
       all_products: "Wszystkie produkty"
       new_product: "Nowy produkt"
+      all_regulamins: "Wszystkie regulaminy"
+      new_regulamin: "Nowy regulamin"
 
   flash:
     new: "Pomyślnie dodano %{item}!"
@@ -45,6 +47,7 @@ pl:
     version: "wersję samochodu"
     add_order_item: "dodano do listy"
     order_item: "usunięto z listy"
+    regulamin: "regulamin"
 
   provide:
     new: "Nowy %{item}"
@@ -72,6 +75,7 @@ pl:
     model: "Model samochodu"
     product: "Produkt"
     version: "Wersja samochodu"
+    regulamin: "Regulamin"
 
   user:
     login: "Login"

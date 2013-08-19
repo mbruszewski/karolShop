@@ -8,8 +8,18 @@ module MainHelper
     @companies[index].image_url
   end
 
-  def get_text
-    txt = "Ala ma kota i jest bardzo z niego dumna bo costam costam i costam costam"
+  def get_regulation
+    @regulamin = Regulamin.find_by_language(cookies[:language]);
+    return @regulamin
+  end
 
+  def get_regulation_title
+    @reg = get_regulation()
+    return @reg.header_main
+  end
+
+  def get_regulation_description
+    @reg = get_regulation()
+    return @reg.description_main
   end
 end

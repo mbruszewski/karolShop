@@ -30,6 +30,8 @@ en:
       new_category: "New category"
       all_products: "All products"
       new_product: "New product"
+      all_regulamins: "All regulations"
+      new_regulamin: "New regulation"
     
 
   flash:
@@ -48,6 +50,7 @@ en:
     version: "wersję samochodu"
     add_order_item: "dodano do listy."
     order_item: "usunięto z listy."
+    regulamin: "regulamin"
 
   provide:
     new: "New %{item}"
@@ -75,6 +78,7 @@ en:
     model: "Model"
     product: "Product"
     version: "Version"
+    regulamin: "Regulamin"
 
   user:
     login: "Login"

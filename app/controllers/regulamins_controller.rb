@@ -10,7 +10,7 @@ class RegulaminsController < OnlyAdminController
   def create
     @regulamin = Regulamin.new(params[:regulamin])
     if @regulamin.save
-      redirect_to @regulamin, :notice => "Successfully created regulamin."
+      redirect_to regulamins_path, :notice => "Successfully created regulamin."
     else
       render :action => 'new'
     end
@@ -23,7 +23,7 @@ class RegulaminsController < OnlyAdminController
   def update
     @regulamin = Regulamin.find(params[:id])
     if @regulamin.update_attributes(params[:regulamin])
-      redirect_to @regulamin, :notice  => "Successfully updated regulamin."
+      redirect_to regulamins_path, :notice  => "Successfully updated regulamin."
     else
       render :action => 'edit'
     end

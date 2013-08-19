@@ -15,9 +15,8 @@
       <td><%= regulamin.description_main %></td>
       <td><%= regulamin.header %></td>
       <td><%= regulamin.description %></td>
-      <td><%= link_to "Show", regulamin %></td>
-      <td><%= link_to "Edit", edit_regulamin_path(regulamin) %></td>
-      <td><%= link_to "Destroy", regulamin, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to t("edit"), edit_regulamin_path(regulamin) %></td>
+      <td><%= link_to t("delete"), regulamin, :confirm => t("confirmation"), :method => :delete %></td>
     </tr>
   <% end %>
 </table>
