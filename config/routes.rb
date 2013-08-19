@@ -1,5 +1,7 @@
 # -*- encoding : utf-8 -*-
 KarolShop::Application.routes.draw do
+  resources :regulamins
+
   resources :products
   resources :categories
   resources :orders

@@ -8,7 +8,7 @@ $black: rgba(16,16,16,0.1);
   text-decoration: none;
 }
 
-div.header{
+.header{
   background-image: url('background_color.jpg');
 	background: $header;
 	font-size: 15px;
@@ -16,33 +16,42 @@ div.header{
 	text-align: center;
   border-style: linear-gradient(to left, $black, white, $black);
   border-width: 1px;
+  color: black;
 
   span {
     @include buttons
   }
+
+  .item{
+    display: inline-block;
+    padding: 5px 2px;
+	  float: center;
+    color: white;
+    text-decoration: none;
+  }
+
+  .item:hover {
+    @include buttons
+  }
+
+  a {
+    padding: 5px 1px;
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover {
+    @include buttons
+  }
+
+  .dropdown-toggle {
+    color: white;
+  }
 }
 
-.item{
-  display: inline-block;
-  padding: 5px 2px;
-	float: center;
-  color: white;
-  text-decoration: none;
-}
 
-.item:hover {
-  @include buttons
-}
 
-a {
-  padding: 5px 1px;
-  color: white;
-  text-decoration: none;
-}
 
-a:hover {
-  @include buttons
-}
 
 .header_line {
   height: 1px;

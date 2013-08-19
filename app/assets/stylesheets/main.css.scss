@@ -48,6 +48,7 @@ $txt_color: #504848;
   }
 
   .element {
+    margin-top: 20px;
     background: $bg_color;
     color: $txt_color;
 
@@ -70,7 +71,8 @@ $txt_color: #504848;
   }
   .regulamin{
     margin: 20px;
-    .header {
+    .head {
+      color: white;
       font-size: 28px;
       margin-top: 10px;
       margin-bottom: 10px;

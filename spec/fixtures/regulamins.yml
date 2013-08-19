@@ -1,0 +1,13 @@
+one:
+  language: MyString
+  header_main: MyString
+  description_main: MyText
+  header: MyString
+  description: MyText
+
+two:
+  language: MyString
+  header_main: MyString
+  description_main: MyText
+  header: MyString
+  description: MyText
