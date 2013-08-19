@@ -11,5 +11,8 @@ module OffertHelper
     return stock.to_s
   end
 
+  def company_name(company)
+    return company.name.upcase
+  end 
 
 end
