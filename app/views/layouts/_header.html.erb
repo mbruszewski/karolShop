@@ -3,7 +3,8 @@
 
   <div class="header_line"></div>
 
-	<%= link_to t("pages.main_page"), root_path, class: 'item' %>
+  <%= link_to t("pages.main_page"), root_path, class: 'item' %>
+  <%= link_to t("pages.regulamin"), reg_page_path, class: 'item' %>
   <%= link_to t("pages.offert_page"), offert_index_path, class: 'item' %>
 
 	<%= render "header/normal_user" %>

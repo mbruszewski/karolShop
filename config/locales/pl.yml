@@ -8,6 +8,7 @@ pl:
     log_out: "Wyloguj"
     log_in: "Zaloguj"
     register: "Rejestracja"
+    regulamin: "Regulamin"
     user_settings:
       index: "Ustawienia użytkownika"
       edit_profile: "Edycja profilu"

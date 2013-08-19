@@ -1,24 +1,43 @@
 <%= form_for @regulamin do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :language %><br />
-    <%= f.text_field :language %>
-  </p>
-  <p>
-    <%= f.label :header_main %><br />
-    <%= f.text_field :header_main %>
-  </p>
-  <p>
-    <%= f.label :description_main %><br />
-    <%= f.text_area :description_main %>
-  </p>
-  <p>
-    <%= f.label :header %><br />
-    <%= f.text_field :header %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+  
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4 offset4">
+          <p>
+            <%= f.label :language %><br />
+            <%= f.select :language, options_for_select([['pl'],['en']]) %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span4">
+          <p>
+            <%= f.label :header_main %><br />
+            <%= f.text_field :header_main %>
+          </p>
+          <p>
+            <%= f.label :description_main %><br />
+            <%= f.text_area :description_main %>
+          </p>
+        </div>
+        <div class="span4 offset4">
+          <p>
+            <%= f.label :header %><br />
+            <%= f.text_field :header %>
+          </p>
+          <p>
+            <%= f.label :description %><br />
+            <%= f.text_area :description %>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="center">
+      <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+    </div>
 <% end %>

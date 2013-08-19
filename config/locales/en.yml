@@ -10,6 +10,7 @@ en:
     log_out: "Log out"
     log_in: "Log in"
     register: "Register"
+    regulamin: "Regulation"
     user_settings:
       index: "Users settings"
       edit_profile: "Edit profile"

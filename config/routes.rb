@@ -26,6 +26,8 @@ KarolShop::Application.routes.draw do
   match "/polish" => "languages#polish", as: :polish
   match "/english" => "languages#english", as: :english
 
+  match "/regulamin" => "regulamins#reg_page", as: :reg_page
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

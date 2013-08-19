@@ -1,6 +1,18 @@
-class RegulaminsController < OnlyAdminController
+# -*- encoding : utf-8 -*-
+class RegulaminsController < ApplicationController
+  before_filter :admin_user, only: [:index, :new, :create, :edit, :update, :destroy]
+
   def index
     @regulamins = Regulamin.all
+  end
+
+  def reg_page
+    @regulamin = Regulamin.find_by_language(cookies[:language])
+    reg = Regulamin.new
+    reg.header = "Regulamin"
+    reg.description = "Trzeba ustawić regulamin"
+
+    @regulamin = @regulamin ? @regulamin : reg
   end
 
   def new

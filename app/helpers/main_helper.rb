@@ -24,4 +24,5 @@ module MainHelper
     reg = reg ? reg.description_main : "zawartość jest pusta"
     return reg
   end
+
 end

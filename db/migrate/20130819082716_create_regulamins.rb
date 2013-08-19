@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateRegulamins < ActiveRecord::Migration
   def self.up
     create_table :regulamins do |t|
