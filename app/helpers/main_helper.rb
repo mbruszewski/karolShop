@@ -9,17 +9,19 @@ module MainHelper
   end
 
   def get_regulation
-    @regulamin = Regulamin.find_by_language(cookies[:language]);
-    return @regulamin
+    regulamin = Regulamin.find_by_language(cookies[:language]);
+    return regulamin
   end
 
   def get_regulation_title
-    @reg = get_regulation()
-    return @reg.header_main ? @reg.header_main : "Regulamin"
+    reg = get_regulation()
+    reg = reg ? reg.header_main : "Regulamin"
+    return reg
   end
 
   def get_regulation_description
-    @reg = get_regulation()
-    return @reg.description_main ? @reg.description_main : "zawartość jest pusta"
+    reg = get_regulation()
+    reg = reg ? reg.description_main : "zawartość jest pusta"
+    return reg
   end
 end
