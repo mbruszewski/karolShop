@@ -1,0 +1,24 @@
+<%= form_for @regulamin do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </p>
+  <p>
+    <%= f.label :header_main %><br />
+    <%= f.text_field :header_main %>
+  </p>
+  <p>
+    <%= f.label :description_main %><br />
+    <%= f.text_area :description_main %>
+  </p>
+  <p>
+    <%= f.label :header %><br />
+    <%= f.text_field :header %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

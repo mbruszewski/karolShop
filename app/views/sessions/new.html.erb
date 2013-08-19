@@ -1,16 +1,18 @@
 <% provide(:title,"Logowanie") %>
 
+
+
 <%= form_for(:session, url: sessions_path) do |f| %>
-	<p>
-  		<%= f.label :login, "Login (e-mail)" %></br>
-  		<%= f.text_field :login %>
+  <p>
+    <%= f.label :login, "Login (e-mail)" %></br>
+  	<%= f.text_field :login %>
+	</p>
+  <p>
+  	<%= f.label :password, "Hasło" %></br>
+  	<%= f.password_field :password %>
 	</p>
 	<p>
-  		<%= f.label :password, "Hasło" %></br>
-  		<%= f.password_field :password %>
-	</p>
-	<p>
-  		<%= f.submit "Zaloguj", class: "btn btn-large btn-primary" %>
+    <%= f.submit "Zaloguj", class: "btn btn-large btn-primary" %>
 	</p>
 <% end %>
 

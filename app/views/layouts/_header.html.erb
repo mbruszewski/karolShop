@@ -1,8 +1,8 @@
 
 <div class="header">
-  <div class="header_line">
-    
-  </div>
+
+  <div class="header_line"></div>
+
 	<%= link_to t("pages.main_page"), root_path, class: 'item' %>
   <%= link_to t("pages.offert_page"), offert_index_path, class: 'item' %>
 
@@ -14,9 +14,9 @@
 		<%= link_to t("pages.register"), new_user_path, class: 'item' %>
 	<% else %>
     <%= link_to t("pages.log_out"), logout_path, class: 'item' %>
-	<% end %>
-  <div class="header_line">
-    
-  </div>
+  <% end %>
+
+  <div class="header_line"></div>
+
 </div>
 

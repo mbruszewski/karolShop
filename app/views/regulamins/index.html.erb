@@ -1,0 +1,25 @@
+<% title "Regulamins" %>
+
+<table>
+  <tr>
+    <th>Language</th>
+    <th>Header Main</th>
+    <th>Description Main</th>
+    <th>Header</th>
+    <th>Description</th>
+  </tr>
+  <% for regulamin in @regulamins %>
+    <tr>
+      <td><%= regulamin.language %></td>
+      <td><%= regulamin.header_main %></td>
+      <td><%= regulamin.description_main %></td>
+      <td><%= regulamin.header %></td>
+      <td><%= regulamin.description %></td>
+      <td><%= link_to "Show", regulamin %></td>
+      <td><%= link_to "Edit", edit_regulamin_path(regulamin) %></td>
+      <td><%= link_to "Destroy", regulamin, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Regulamin", new_regulamin_path %></p>
