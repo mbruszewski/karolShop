@@ -15,11 +15,11 @@ module MainHelper
 
   def get_regulation_title
     @reg = get_regulation()
-    return @reg.header_main
+    return @reg.header_main ? @reg.header_main : "Regulamin"
   end
 
   def get_regulation_description
     @reg = get_regulation()
-    return @reg.description_main
+    return @reg.description_main ? @reg.description_main : "zawartość jest pusta"
   end
 end
