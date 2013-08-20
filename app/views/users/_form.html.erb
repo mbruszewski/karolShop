@@ -1,22 +1,29 @@
-<%= form_for @user do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :login, t("user.login") %><br />
+<div class="space2"></div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 offset4">
+      <%= form_for @user do |f| %>
+        <%= f.error_messages %>
+        <p>
+          <%= f.label :login, t("user.login") %><br />
 
-		<% if yield(:title) == t("provide.edit", item: t("model.user")) %>
- 	   	<%= f.text_field :login , disabled: true %>
-		<% else %>
-			<%= f.text_field :login %>
-		<% end %>
+		      <% if yield(:title) == t("provide.edit", item: t("model.user")) %>
+ 	   	      <%= f.text_field :login , disabled: true %>
+		      <% else %>
+			      <%= f.text_field :login %>
+		      <% end %>
 
-  </p>
-  <p>
-    <%= f.label :password, t("user.password") %><br />
-    <%= f.password_field :password %>
-  </p>
-	<p>
-    <%= f.label :password_confirmation, t("user.password_confirmation") %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
-<% end %>
+        </p>
+        <p>
+          <%= f.label :password, t("user.password") %><br />
+          <%= f.password_field :password %>
+        </p>
+	      <p>
+          <%= f.label :password_confirmation, t("user.password_confirmation") %><br />
+          <%= f.password_field :password_confirmation %>
+        </p>
+        <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
