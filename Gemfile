@@ -36,7 +36,7 @@ group :production do
   gem 'rails_12factor' 
 end
 
-group :development do
+group :test, :development do
   gem 'sqlite3'
 end
 # To use ActiveModel has_secure_password

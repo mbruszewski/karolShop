@@ -31,10 +31,12 @@ describe UsersController do
   end
 
   describe "logged as normal user" do
-    before { sign_in user }
+    before { sign_in user, no_capybara: true }
    
     describe "should have access to" do
       it "show" do
+        include 'pry'
+        binding.pry
         get :show, id: user.id
       end    
 
@@ -64,7 +66,7 @@ describe UsersController do
   end
 
   describe "logged as admin user" do
-    before { sign_in admin }
+    before { sign_in admin, no_capybara: true }
     
     describe "should have access to" do
       it "show" do
