@@ -28,9 +28,9 @@
     background: url('button.png') no-repeat transparent;
   }
 
-  .button2 {
+  .button14 {
     @include butt;
-    background: url('button2.png') no-repeat transparent;
+    background: url('button14.png') no-repeat transparent;
   }
 
   .button3 {
@@ -80,11 +80,6 @@
   .button13 {
     @include butt;
     background: url('button13.png') no-repeat transparent;
-  }
-
-  .button14 {
-    @include butt;
-    background: url('background_color.jpg') transparent;
   }
 
   .button15 {
