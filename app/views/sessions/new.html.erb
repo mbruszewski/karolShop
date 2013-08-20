@@ -1,4 +1,4 @@
-<% provide(:title,"Logowanie") %>
+<% provide(:title,t("pages.log_in")) %>
 
 <div class="space2"></div>
 
@@ -7,15 +7,15 @@
     <div class="span4 offset4">
       <%= form_for(:session, url: sessions_path) do |f| %>
         <p>
-          <%= f.label :login, "Login (e-mail)" %></br>
+          <%= f.label :login, t("user.login") %></br>
   	      <%= f.text_field :login %>
 	      </p>
         <p>
-  	      <%= f.label :password, "Hasło" %></br>
+  	      <%= f.label :password, t("user.password") %></br>
   	      <%= f.password_field :password %>
 	      </p>
 	      <p>
-          <%= f.submit "Zaloguj", class: "btn btn-large btn-primary" %>
+          <%= f.submit t("pages.log_in"), class: "btn btn-large btn-primary" %>
 	      </p>
       <% end %>
     </div>
