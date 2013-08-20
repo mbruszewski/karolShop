@@ -30,7 +30,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-		if params[:id] == current_user || current_user.admin
+    pp current_user.id
+    pp params[:id].to_i
+
+		if params[:id] == current_user.id || current_user.admin
     	@user = User.find(params[:id])
 		else
 			redirect_to root_path
@@ -38,7 +41,7 @@ class UsersController < ApplicationController
   end
 
   def update
-		if params[:id] == current_user || current_user.admin
+		if params[:id] == current_user.id || current_user.admin
 		  @user = User.find(params[:id])
 		  if @user.update_attributes(params[:user])
 		    redirect_to root_path, :notice  => t("flash.edit", item: t("controller.user"))
