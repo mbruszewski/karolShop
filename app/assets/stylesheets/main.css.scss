@@ -15,10 +15,18 @@ body {
 }
 
 .flash {
-  background: gray;
+  background: black;
   color: white;
   text-align: center;
+  margin-bottom: 20px;
+}
 
+.space {
+  height: 10px;
+}
+
+.space2 {
+  height: 30px;
 }
 
 .main-content {
@@ -29,15 +37,6 @@ body {
   .title {
     text-align: center; 
     color: white;
-  }
-
-  .space {
-    height: 10px;
-  }
-
-  .space2 {
-    height: 30px;
-
   }
 }
 
