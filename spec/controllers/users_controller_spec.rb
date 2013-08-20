@@ -35,8 +35,6 @@ describe UsersController do
    
     describe "should have access to" do
       it "show" do
-        include 'pry'
-        binding.pry
         get :show, id: user.id
       end    
 
