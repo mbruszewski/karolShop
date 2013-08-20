@@ -1,18 +1,23 @@
 <% provide(:title,"Logowanie") %>
 
+<div class="space2"></div>
 
-
-<%= form_for(:session, url: sessions_path) do |f| %>
-  <p>
-    <%= f.label :login, "Login (e-mail)" %></br>
-  	<%= f.text_field :login %>
-	</p>
-  <p>
-  	<%= f.label :password, "Hasło" %></br>
-  	<%= f.password_field :password %>
-	</p>
-	<p>
-    <%= f.submit "Zaloguj", class: "btn btn-large btn-primary" %>
-	</p>
-<% end %>
-
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 offset4">
+      <%= form_for(:session, url: sessions_path) do |f| %>
+        <p>
+          <%= f.label :login, "Login (e-mail)" %></br>
+  	      <%= f.text_field :login %>
+	      </p>
+        <p>
+  	      <%= f.label :password, "Hasło" %></br>
+  	      <%= f.password_field :password %>
+	      </p>
+	      <p>
+          <%= f.submit "Zaloguj", class: "btn btn-large btn-primary" %>
+	      </p>
+      <% end %>
+    </div>
+  </div>
+</div>
