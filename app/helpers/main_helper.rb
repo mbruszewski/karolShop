@@ -8,6 +8,10 @@ module MainHelper
     @companies[index].image_url
   end
 
+  def get_redirect_path
+    offert_index_path 
+  end
+
   def get_regulation
     regulamin = Regulamin.find_by_language(cookies[:language]);
     return regulamin

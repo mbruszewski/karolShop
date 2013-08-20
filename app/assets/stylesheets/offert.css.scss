@@ -109,14 +109,18 @@
     padding: 0px;
     margin: 0px;
     font-size: 11px;
-    padding-left: 30px;
+    padding-left: 40px;
     height: 30px;
     width: 260px; 
     background: url('button9.png') no-repeat transparent;
     border-width: 0px;
     text-align: left;
-    color: white;
+    color: black;
+    &:hover{
+      font-weight: bold;
+    }
   }
+  
   .button10 {
     padding: 0px;
     margin: 0px;
@@ -129,4 +133,70 @@
     text-align: left;
     color: white;
   }
+
+  .button11 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    padding-left: 40px;
+    height: 30px;
+    width: 260px; 
+    background: url('button11.png') no-repeat transparent;
+    border-width: 0px;
+    text-align: left;
+    color: black;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+
+  .button12 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    padding-left: 40px;
+    height: 30px;
+    width: 260px; 
+    background: url('button12.png') no-repeat transparent;
+    border-width: 0px;
+    text-align: left;
+    color: white;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+
+  .button13 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    padding-left: 40px;
+    height: 30px;
+    width: 260px; 
+    background: url('button13.png') no-repeat transparent;
+    border-width: 0px;
+    text-align: left;
+    color: white;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+
+  .button14 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 11px;
+    padding-left: 40px;
+    height: 30px;
+    width: 260px; 
+    background: url('button14.png') no-repeat transparent;
+    border-width: 0px;
+    text-align: left;
+    color: black;
+    &:hover{
+      font-weight: bold;
+    }
+  }
+
+
 }
