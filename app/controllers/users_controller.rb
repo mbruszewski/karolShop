@@ -30,9 +30,6 @@ class UsersController < ApplicationController
   end
 
   def edit
-    pp current_user.id
-    pp params[:id].to_i
-
 		if params[:id].to_i == current_user.id || current_user.admin
     	@user = User.find(params[:id])
 		else
