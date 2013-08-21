@@ -8,11 +8,11 @@
       <%= form_for @model do |f| %>
 	      <%= f.error_messages %>
 	      <p>
-		      <%= f.label :name, t("name") %>
+          <%= f.label :name, t("name") %><br/>
 		      <%= f.text_field :name %>
         </p>
         <p>
-          <%= f.label :company_id, t("model.company") %>
+          <%= f.label :company_id, t("model.company") %><br/>
           <%= f.select(:company_id, Company.all.collect { |p| [p.name, p.id] }) %>
         </p>
 	      <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>

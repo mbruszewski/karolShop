@@ -17,16 +17,16 @@ module MainHelper
     return regulamin
   end
 
-  def get_regulation_title
+  def get_regulation_main_title
     reg = get_regulation()
-    reg = reg ? reg.header_main : "Regulamin"
-    return reg
+    value = reg ? reg.header_main : "Regulamin"
+    return value
   end
 
-  def get_regulation_description
+  def get_regulation_main_description
     reg = get_regulation()
-    reg = reg ? reg.description_main : "zawartość jest pusta"
-    return reg
+    value = reg ? reg.description_main : "zawartość jest pusta"
+    return value
   end
 
 end
