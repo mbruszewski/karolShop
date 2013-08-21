@@ -14,7 +14,7 @@ module RegulaminsHelper
 
   def get_regulation_description
     reg = get_regulation()
-    reg = reg ? reg.description : "zawartość jest pusta"
+    reg = reg ? simple_format(reg.description) : "zawartość jest pusta"
     return reg
   end
 

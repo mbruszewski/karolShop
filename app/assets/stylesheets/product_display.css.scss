@@ -30,6 +30,18 @@ $txt_color: #616271;
     font-size: 12px;
   }
 
+  .button1 {
+    height: 30px;
+    width: 100px;
+    color: white;
+    background: url('hover2.png') repeat-x transparent;
+    border-width: 0px;
+    border-style: none;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
 }
 
 .horizontal-line{
