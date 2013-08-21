@@ -1,12 +1,25 @@
-<%= form_for @model do |f| %>
-	<%= f.error_messages %>
-	<p>
-		<%= f.label :name, t("name") %>
-		<%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :company_id, t("model.company") %>
-    <%= f.select(:company_id, Company.all.collect { |p| [p.name, p.id] }) %>
-  </p>
-	<p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
-<% end %>
+
+<div class="space2"></div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 offset4">
+
+      <%= form_for @model do |f| %>
+	      <%= f.error_messages %>
+	      <p>
+		      <%= f.label :name, t("name") %>
+		      <%= f.text_field :name %>
+        </p>
+        <p>
+          <%= f.label :company_id, t("model.company") %>
+          <%= f.select(:company_id, Company.all.collect { |p| [p.name, p.id] }) %>
+        </p>
+	      <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+<div class="space2"></div>

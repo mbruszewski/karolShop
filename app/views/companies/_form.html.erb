@@ -1,12 +1,24 @@
-<%= form_for @company do |f| %>
-  	<%= f.error_messages %>
-  	<p>
-    	<%= f.label :name, t("name") %><br />
-    	<%= f.text_field :name %>
-  	</p>
-	<p>
-		<%= f.label :image_url, t("image_url") %><br/>
-		<%= f.text_field :image_url %><br/>
-	</p>
-  	<p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
-<% end %>
+
+<div class="space2"></div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 offset4">
+
+      <%= form_for @company do |f| %>
+  	    <%= f.error_messages %>
+  	    <p>
+    	    <%= f.label :name, t("name") %><br />
+    	    <%= f.text_field :name %>
+  	    </p>
+	      <p>
+		      <%= f.label :image_url, t("image_url") %><br/>
+		      <%= f.text_field :image_url %><br/>
+	      </p>
+  	    <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="space2"></div>
