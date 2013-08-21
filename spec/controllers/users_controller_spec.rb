@@ -4,7 +4,7 @@ require 'spec_helper'
 describe UsersController do
 
   let(:user) { FactoryGirl.create(:user) }
-  let(:admin) { FactoryGirl.create(:admin) }
+  let(:admin) { FactoryGirl.create(:user, :admin) }
 
 
   describe "not logged user" do

@@ -5,7 +5,7 @@ FactoryGirl.define do
     password "foobar"
     password_confirmation "foobar"
 
-    factory :admin do
+    trait :admin do
      	admin true
     end
 	end
@@ -14,8 +14,16 @@ FactoryGirl.define do
 		sequence(:city) { |n| "city_#{n}" }
 		street_and_number "Tab 11"
 		post_code "15-666"
-		user
-  	end
+    
+    trait :normal_address do
+      user
+    end
+    
+    trait :admin_address do
+      association :user, :admin
+    end
+
+  end
 	
 	factory :brand do	
 		sequence(:name) { |n| "brand_#{n}" }
@@ -50,8 +58,15 @@ FactoryGirl.define do
 	end
 
 	factory :order do
-		user
-		address
+    trait :normal_order do
+      user
+      association :address,:normal_address
+    end
+
+    trait :admin_order do
+      association :user,:admin
+      association :address,:admin_address
+    end
 	end
 
 	factory :order_item do

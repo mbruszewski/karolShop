@@ -1,9 +1,9 @@
-$header: linear-gradient(to left, black 50%);
-$hover: url('hover.png') repeat-x scroll 0 0 transparent;
+$hover: url('hover2.png') repeat-x scroll 0 0 transparent;
 $black: rgba(16,16,16,0.1);
 
 @mixin buttons {
   color: white;
+  font-weight: bold;
   background: $hover;
   text-decoration: none;
 }
@@ -11,7 +11,6 @@ $black: rgba(16,16,16,0.1);
 .header{
   margin: 25px;
   background-image: url('background_color.jpg');
-	background: $header;
 	font-size: 15px;
 	height: 30px;
 	text-align: center;
