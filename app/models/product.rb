@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
-  attr_accessible :name, :description, :price, :stock
+  attr_accessible :name, :description, :price, :image_url
 	
 	belongs_to :category
 	belongs_to :brand

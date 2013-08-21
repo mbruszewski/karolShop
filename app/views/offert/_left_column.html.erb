@@ -1,4 +1,7 @@
 <% for company in @companies %>
   <%= button_to company_name(company), root_path, class: "button" %>
+  <% for model in company.models %>
+    <%= button_to model.name, root_path, class: "button2" %>
+  <% end %>
 <% end %>
 

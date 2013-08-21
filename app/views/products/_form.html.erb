@@ -20,6 +20,10 @@
           <%= f.label :price, t("product.price") %><br />
           <%= f.text_field :price %>
         </p>
+        <p>
+          <%= f.label :image_url %><br/>
+          <%= f.text_field :image_url %>
+        </p>
         <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
       <% end %>
     </div>

@@ -8,7 +8,7 @@
           <%= link_to(get_redirect_path) do %>
             <div class="element">
               <%= image_tag(get_url(i), class: 'image') %>
-              <p class="text"> <%= get_name(i) %> </p>
+              <p class="text"> <%= upcase(get_name(i)) %> </p>
             </div>
           <% end %>
         <% end %>
@@ -19,7 +19,7 @@
           <%= link_to(get_redirect_path) do %>
             <div class="element">
               <%= image_tag(get_url(i), class: 'image') %>
-              <p class="text"> <%= get_name(i) %> </p>
+              <p class="text"> <%= upcase(get_name(i)) %> </p>
             </div>
           <% end %>
         <% end %>

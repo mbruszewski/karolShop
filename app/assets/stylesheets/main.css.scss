@@ -60,9 +60,9 @@ $txt_color: #504848;
   background: black;
   float: center;
   text-decoration: none;
-  width: 800px;
+  width: 830px;
   display: in-line;
-
+  
 
   a {
     background: black;
@@ -80,6 +80,7 @@ $txt_color: #504848;
     }
 
     .text {
+      font-family:Arial-narrow,arial;
       padding: 3px;
       font-size: 20px;
     }
@@ -88,8 +89,8 @@ $txt_color: #504848;
       color: white;
       font-weight: bold;
     }
-
   }
+
   .regulamin{
     .head {
       color: white;

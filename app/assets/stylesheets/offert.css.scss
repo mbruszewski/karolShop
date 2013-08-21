@@ -4,9 +4,9 @@
 
 
 @mixin butt {
-    padding: 0px;
+    padding-top: 3px;
     margin: 0px;
-    font-size: 11px;
+    font-size: 14px;
     padding-left: 40px;
     height: 30px;
     width: 260px; 
@@ -26,5 +26,10 @@
   .button {
     @include butt;
     background: url('button.png') no-repeat transparent;
+  }
+
+  .button2 {
+    @include butt;
+    background: black;
   }
 }
