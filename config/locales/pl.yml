@@ -79,7 +79,7 @@ pl:
     regulamin: "Regulamin"
 
   user:
-    login: "Login"
+    login: "Login (e-mail)"
     password: "Hasło"
     password_confirmation: "Potwierdzenie hasła"
 
