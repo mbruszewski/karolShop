@@ -1,18 +1,23 @@
 <% provide(:title, t("pages.user_settings.your_addresses")) %>
 
-<table>
-  <tr>
-    <th><%= t("address.city") %></th>
-    <th><%= t("address.street") %></th>
-    <th><%= t("address.post_code") %></th>
-  </tr>
-  <% for address in @addresses %>
-    <tr>
-      <td><%= address.city %></td>
-      <td><%= address.street_and_number %></td>
-      <td><%= address.post_code %></td>
-      <td><%= link_to t("edit"), edit_address_path(address) %></td>
-      <td><%= link_to t("delete"), address, :confirm => t("confirmation"), :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+
+<div class="space_table"></div>
+  <center>
+    <table>
+      <tr>
+        <th><%= t("address.city") %></th>
+        <th><%= t("address.street") %></th>
+        <th><%= t("address.post_code") %></th>
+      </tr>
+      <% for address in @addresses %>
+        <tr>
+          <td><%= address.city %></td>
+          <td><%= address.street_and_number %></td>
+          <td><%= address.post_code %></td>
+          <td><%= link_to t("edit"), edit_address_path(address) %></td>
+          <td><%= link_to t("delete"), address, :confirm => t("confirmation"), :method => :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+  </center>
+<div class="space_table"></div>

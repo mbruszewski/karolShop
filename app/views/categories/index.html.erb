@@ -1,15 +1,19 @@
 <% provide(:title, t("pages.admin_options.all_categories")) %>
 
-<table>
-  <tr>
-    <th><%= t("name") %></th>
-  </tr>
-  <% for category in @categories %>
+<div class="space_table"></div>
+
+<center>
+  <table>
     <tr>
-      <td><%= category.name %></td>
-      <td><%= link_to t("show"), category %></td>
-      <td><%= link_to t("edit"), edit_category_path(category) %></td>
-      <td><%= link_to t("delete"), category, :confirm => t("confirmation"), :method => :delete %></td>
+      <th><%= t("name") %></th>
     </tr>
-  <% end %>
-</table>
+    <% for category in @categories %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to t("show"), category %></td>
+        <td><%= link_to t("edit"), edit_category_path(category) %></td>
+        <td><%= link_to t("delete"), category, :confirm => t("confirmation"), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>

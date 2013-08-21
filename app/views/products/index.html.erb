@@ -1,23 +1,27 @@
 <% provide(:title, t("pages.admin_options.all_products")) %>
 
-<table>
-  <tr>
-    <th><%= t("name") %></th>
-    <th><%= t("price.description") %></th>
-    <th><%= t("product.price") %></th>
-    <th><%= t("product.stock") %></th>
-  </tr>
-  <% for product in @products %>
-    <tr>
-      <td><%= product.name %></td>
-      <td><%= product.description %></td>
-      <td><%= product.price %></td>
-      <td><%= product.stock %></td>
+<div class="space_table"></div>
 
-      <td><%= link_to t("show"), product %></td>
-      <td><%= link_to t("edit"), edit_product_path(product) %></td>
-      <td><%= link_to t("delete"), product, :confirm => t("confirmation"), :method => :delete %></td>
+<center>
+  <table>
+    <tr>
+      <th><%= t("name") %></th>
+      <th><%= t("price.description") %></th>
+      <th><%= t("product.price") %></th>
     </tr>
-  <% end %>
-</table>
+    <% for product in @products %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+
+        <td><%= link_to t("show"), product %></td>
+        <td><%= link_to t("edit"), edit_product_path(product) %></td>
+        <td><%= link_to t("delete"), product, :confirm => t("confirmation"), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>
+
+<div class="space_table"></div>
 

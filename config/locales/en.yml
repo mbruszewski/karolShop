@@ -41,17 +41,17 @@ en:
     delete: "Succesfully deleted %{item}!"
 
   controller:
-    address: "adres"
-    user: "użytkownika"
-    brand: "firmę"
-    category: "kategorię"
-    company: "markę samochodu"
-    model: "model samochodu"
-    product: "produkt"
-    version: "wersję samochodu"
-    add_order_item: "dodano do listy."
-    order_item: "usunięto z listy."
-    regulamin: "regulamin"
+    address: "address"
+    user: "user"
+    brand: "brand"
+    category: "category"
+    company: "company"
+    model: "car model"
+    product: "product"
+    version: "car version"
+    add_order_item: "added to list."
+    order_item: "deleted from list."
+    regulamin: "regulation"
 
   provide:
     new: "New %{item}"

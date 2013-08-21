@@ -1,20 +1,27 @@
+$color: white;
+
 table {
-	border-color: black;
+	border-color: $color;
 	border-width: 1px;
-	
 }
 
 tr {
 	width: 100px;
-	border-width: 2px;
+	border-width: 1px;
+  font-size: 13px;
 }
 
 table,tr,th,td {
-	border:2px solid black;
+	border: 1px solid $color;
 }
 
 th {
-	font-size: 20px;
-	color: black;
+	font-size: 15px;
+	color: $color;
 	font-weight: bold;
+  text-align: center;
+}
+
+.space_table{
+  height: 20px;
 }

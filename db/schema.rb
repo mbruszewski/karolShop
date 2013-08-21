@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130819082716) do
+ActiveRecord::Schema.define(:version => 20130821110840) do
 
   create_table "addresses", :force => true do |t|
     t.string   "city"
@@ -80,11 +80,11 @@ ActiveRecord::Schema.define(:version => 20130819082716) do
     t.string   "name"
     t.text     "description"
     t.decimal  "price"
-    t.integer  "stock"
     t.integer  "category_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "brand_id"
+    t.string   "image_url"
   end
 
   create_table "products_versions", :force => true do |t|

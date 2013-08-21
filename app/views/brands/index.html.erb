@@ -1,16 +1,22 @@
 <% provide(:title, t("pages.admin_options.all_brands")) %>
 
-<table>
-	<tr>
-		<th>ID</th>
-    <th><%= t("name") %></th>
-	</tr>
-	<% for brand in @brands %>
-	<tr>
-		<td><%= brand.id %></td>
-		<td><%= brand.name %></td>
-		<td><%= link_to t("edit"), edit_brand_path(brand) %></td>
-		<td><%= link_to t("delete"), brand, confirm: t("confirmation"), method: :delete %></td>
-	</tr>
-	<% end %>
-</table>
+<div class="space_table"></div>
+
+<center>
+  <table>
+	  <tr>
+		  <th>ID</th>
+      <th><%= t("name") %></th>
+	  </tr>
+	  <% for brand in @brands %>
+	    <tr>
+		    <td><%= brand.id %></td>
+		    <td><%= brand.name %></td>
+		    <td><%= link_to t("edit"), edit_brand_path(brand) %></td>
+		    <td><%= link_to t("delete"), brand, confirm: t("confirmation"), method: :delete %></td>
+	    </tr>
+	  <% end %>
+  </table>
+</center>
+
+<div class="space_table"></div>

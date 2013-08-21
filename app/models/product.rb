@@ -20,8 +20,7 @@ class Product < ActiveRecord::Base
 
 	validates :name, presence: :true
 	validates :price, presence: :true
-	validates :stock, presence: :true
-  
+
   ##############################################
   def add_model(model)
     models_products.create!(model_id: model.id)

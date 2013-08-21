@@ -1,23 +1,28 @@
 <% provide(:title, t("pages.admin_options.all_regulamins")) %>
 
-<table>
-  <tr>
-    <th>Language</th>
-    <th>Header Main</th>
-    <th>Description Main</th>
-    <th>Header</th>
-    <th>Description</th>
-  </tr>
-  <% for regulamin in @regulamins %>
-    <tr>
-      <td><%= regulamin.language %></td>
-      <td><%= regulamin.header_main %></td>
-      <td><%= regulamin.description_main %></td>
-      <td><%= regulamin.header %></td>
-      <td><%= regulamin.description %></td>
-      <td><%= link_to t("edit"), edit_regulamin_path(regulamin) %></td>
-      <td><%= link_to t("delete"), regulamin, :confirm => t("confirmation"), :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<div class="space_table"></div>
 
+<center>
+  <table>
+    <tr>
+      <th>Language</th>
+      <th>Header Main</th>
+      <th>Description Main</th>
+      <th>Header</th>
+      <th>Description</th>
+    </tr>
+    <% for regulamin in @regulamins %>
+      <tr>
+        <td><%= regulamin.language %></td>
+        <td><%= regulamin.header_main %></td>
+        <td><%= regulamin.description_main %></td>
+        <td><%= regulamin.header %></td>
+        <td><%= regulamin.description %></td>
+        <td><%= link_to t("edit"), edit_regulamin_path(regulamin) %></td>
+        <td><%= link_to t("delete"), regulamin, :confirm => t("confirmation"), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>
+
+<div class="space_table"></div>

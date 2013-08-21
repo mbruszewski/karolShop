@@ -1,15 +1,22 @@
 <% provide(:title, t("pages.admin_options.all_models")) %>
 
-<table>
-  <tr>Nazwa producenta</tr>
-  <tr>Nazwa modelu</tr>
-  <% for model in @models %>
-    <tr>
-      <td><%= model.company.name %></td>
-      <td><%= model.name %></td>
-      <td><%= link_to t("edit"), edit_model_path(model) %></td>
-      <td><%= link_to t("delete"), model, confirm: t("confirmation"), method: :delete %></td>
-    </tr>
-  <% end %>
+<div class="space_table"></div>
 
-</table>
+<center>
+  <table>
+    <tr>
+      <th>Nazwa producenta</th>
+      <th>Nazwa modelu</th>
+    </tr>
+    <% for model in @models %>
+      <tr>
+        <td><%= model.company.name %></td>
+        <td><%= model.name %></td>
+        <td><%= link_to t("edit"), edit_model_path(model) %></td>
+        <td><%= link_to t("delete"), model, confirm: t("confirmation"), method: :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>
+
+<div class="space_table"></div>

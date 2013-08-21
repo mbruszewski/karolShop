@@ -1,17 +1,23 @@
 <% provide(:title, t("pages.admin_options.all_versions")) %>
 
-<table>
-  <tr>
-    <th><%= t("name") %></th>
-  </tr>
-  <% for version in @versions %>
-    <tr>
-      <td><%= version.name %></td>
+<div class="space_table"></div>
 
-      <td><%= link_to t("show"), version %></td>
-      <td><%= link_to t("edit"), edit_version_path(version) %></td>
-      <td><%= link_to t("delete"), version, :confirm => t("confirmation"), :method => :delete %></td>
+<center>
+  <table>
+    <tr>
+      <th><%= t("name") %></th>
     </tr>
-  <% end %>
-</table>
+    <% for version in @versions %>
+      <tr>
+        <td><%= version.name %></td>
+
+        <td><%= link_to t("show"), version %></td>
+        <td><%= link_to t("edit"), edit_version_path(version) %></td>
+        <td><%= link_to t("delete"), version, :confirm => t("confirmation"), :method => :delete %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>
+
+<div class="space_table"></div>
 
