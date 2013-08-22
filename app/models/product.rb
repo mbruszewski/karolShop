@@ -21,32 +21,4 @@ class Product < ActiveRecord::Base
 	validates :name, presence: :true
 	validates :price, presence: :true
 
-  ##############################################
-  def add_model(model)
-    models_products.create!(model_id: model.id)
-  end
-
-  def delete_model(model)
-    models_products.find_by_model_id(model.id).destroy
-  end
-  ##############################################  
-  def add_company(company)
-    companies_products.create!(company_id: company.id)
-  end
-
-  def delete_company(company)
-    companies_products.find_by_model_id(company.id).destroy
-  end
-  ##############################################
-  def add_version(version)
-    products_versions.create!(version_id: version.id)
-  end
-
-  def delete_version(version)
-    products_versions.find_by_model_id(version.id).destroy
-  end
-  ##############################################
-
-
-
 end

@@ -2,7 +2,8 @@
 module OffertHelper
 
   def print_price(price)
-    price = number_to_currency(price, unit: "")
+    price = number_with_precision(price, precision: 2)
+    price = number_to_currency(price, unit: "", precision: 2)
     price = price.to_s + " zł"
     return price
   end
