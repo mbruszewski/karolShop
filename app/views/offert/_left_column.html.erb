@@ -1,7 +1,17 @@
 <% for company in @companies %>
-  <%= button_to company_name(company), root_path, class: "button" %>
-  <% for model in company.models %>
-    <%= button_to model.name, root_path, class: "button2" %>
+  <%= link_to(root_path) do %>
+    <div class="left_link_main">
+      <%= company_name(company) %>
+    </div>   
   <% end %>
+
+  <% for model in company.models %>
+    <%= link_to(root_path) do %>
+      <div class="left_link_second">
+        <%= model.name %>
+      </div>
+    <% end %>
+  <% end %>
+
 <% end %>
 

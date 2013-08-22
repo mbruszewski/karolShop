@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class RemoveStockFromProduct < ActiveRecord::Migration
   def up
     remove_column :products, :stock

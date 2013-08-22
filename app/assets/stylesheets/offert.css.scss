@@ -3,33 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-@mixin butt {
-    padding-top: 3px;
-    margin: 0px;
-    font-size: 14px;
-    padding-left: 40px;
+@mixin links {
     height: 30px;
-    width: 260px; 
-    border-width: 0px;
+    width: 260px;
+    text-decoration: none;
+    padding-top: 5px;
     text-align: left;
     color: white;
 
-    &:hover{
+    &:hover {
       font-weight: bold;
     }
 }
+
 
 .offert {
   width: 830px;
   background: black;
 
-  .button {
-    @include butt;
-    background: url('button.png') no-repeat transparent;
+  a {
+    text-decoration: none;
   }
 
-  .button2 {
-    @include butt;
-    background: black;
+  .left_link_main {
+    @include links;
+    padding-left: 25px;
+    background: url("button.png") no-repeat transparent;
+    color: white;
+    font-size: 15px;
   }
+
+  .left_link_second {
+    @include links;
+    padding-left: 30px;
+    background: black;
+    color: white;
+    font-size: 13px;
+
+
+  }
+
+
+
 }

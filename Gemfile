@@ -15,7 +15,7 @@ gem 'magic_encoding'
 gem 'pry'
 gem 'i18n'
 gem 'rails-i18n'
-
+gem 'carrierwave'
 
 gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
