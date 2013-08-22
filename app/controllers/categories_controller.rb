@@ -4,10 +4,6 @@ class CategoriesController < OnlyAdminController
     @categories = Category.all
   end
 
-  def show
-    @category = Category.find(params[:id])
-  end
-
   def new
     @category = Category.new
   end
@@ -15,7 +11,7 @@ class CategoriesController < OnlyAdminController
   def create
     @category = Category.new(params[:category])
     if @category.save
-      redirect_to @category, :notice => t("flash.new", item: t("controller.category"))
+      redirect_to categories_url, :notice => t("flash.new", item: t("controller.category"))
     else
       render :action => 'new'
     end
@@ -28,7 +24,7 @@ class CategoriesController < OnlyAdminController
   def update
     @category = Category.find(params[:id])
     if @category.update_attributes(params[:category])
-      redirect_to @category, :notice  => t("flash.edit", item: t("controller.category"))
+      redirect_to categories_url, :notice  => t("flash.edit", item: t("controller.category"))
     else
       render :action => 'edit'
     end

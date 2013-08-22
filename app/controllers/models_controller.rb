@@ -13,7 +13,7 @@ class ModelsController < OnlyAdminController
 	def create
 		@model = Model.new(params[:model])
 		if @model.save
-			redirect_to root_path, notice: t("flash.new", item: t("controller.model"))
+			redirect_to models_url, notice: t("flash.new", item: t("controller.model"))
 		else
 			render action: 'new'
 		end
@@ -26,7 +26,7 @@ class ModelsController < OnlyAdminController
 	def update
 		@model = Model.find(params[:id])
 		if @model.update_attributes(params[:id])
-			redirect_to root_path, notice: t("flash.edit", item: t("controller.model"))
+			redirect_to models_url, notice: t("flash.edit", item: t("controller.model"))
 		end
 	end
 

@@ -12,7 +12,7 @@ class VersionsController < OnlyAdminController
 	def update
 		@version = Version.find(params[:id])
 		if @version.update_attributes(params[:version])
-			redirect_to root_path, notice: t("flash.edit", item: t("controller.version"))
+			redirect_to versions_url, notice: t("flash.edit", item: t("controller.version"))
 		else
 			render action: 'edit'
 		end	
@@ -25,7 +25,7 @@ class VersionsController < OnlyAdminController
 	def create
 		@version = Version.new(params[:version])
 		if @version.save
-			redirect_to root_path, notice: t("flash.new", item: t("controller.version"))
+			redirect_to versions_url, notice: t("flash.new", item: t("controller.version"))
 		else
 			render action: 'new'
 		end

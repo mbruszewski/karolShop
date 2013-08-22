@@ -12,7 +12,7 @@ class CompaniesController < OnlyAdminController
 	def create
 		@company = Company.new(params[:company])
 		if @company.save
-			redirect_to root_path, notice: t("flash.new", item: t("controller.company"))
+			redirect_to companies_url, notice: t("flash.new", item: t("controller.company"))
 		else
 			render action: 'new'
 		end
@@ -25,7 +25,7 @@ class CompaniesController < OnlyAdminController
 	def update
 		@company = Company.find(params[:id])
 		if @company.update_attributes(params[:company])
-			redirect_to root_path, notice: t("flash.edit", item: t("controller.company"))
+			redirect_to companies_url, notice: t("flash.edit", item: t("controller.company"))
 		else
 			render action: 'edit'
 		end
