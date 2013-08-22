@@ -5,13 +5,24 @@
     </div>   
   <% end %>
 
+  <!-- HERE I ADD MODELS -->
+
   <% for model in company.models %>
     <%= link_to(root_path) do %>
       <div class="left_link_second">
         <%= model.name %>
       </div>
+
+      <!-- HERE I ADD VERSIONS -->
+
+      <% for version in model.versions %>
+        <%= link_to(root_path) do %>
+          <div class="left_link_thirth">
+          </div>
+        <% end %>
+
+      <% end %>
     <% end %>
   <% end %>
-
 <% end %>
 
