@@ -18,9 +18,17 @@
 //
 
 
-function modelsVisibility() {
-  var v = document.getElementsByName("models").style.display = "none";
-  v[0].style.display = 'none';
+function hideall(){  
+}
+
+function modelsVisibility(what,id) {
+  str = what+id;
+  var v1 = document.getElementsByName(str);
+
+
+  for (i=0;i<v1.length;i++){
+    v1[i].style.display = "inline-block";
+  }
 }
 
 function versionsVisibility() {

@@ -1,8 +1,5 @@
-
-<div name="models">abc</div>
-
 <% for company in @companies %>
-  <%= link_to("", onclick: "modelsVisibility") do %>
+  <%= link_to("", onclick: "modelsVisibility('company',"+company.id.to_s+")") do %>
     <div class="left_link_main">
       <%= company_name(company) %>
     </div>   
@@ -12,20 +9,18 @@
 
   <% for model in company.models %>
     <%= link_to("") do %>
-      <div class="left_link_second" name="models">
+      <div class="left_link_second" name="company<%= company.id %>">
         <%= model.name %>
       </div>
+    <% end %>
 
-      <!-- HERE I ADD VERSIONS -->
+  <!-- HERE I ADD VERSIONS -->
 
-      <% for version in model.versions %>
-        <%= link_to("") do %>
-
-          <div class="left_link_thirth" name="versions">
-            <%= version.name %>
-          </div>
-        <% end %>
-
+    <% for version in model.versions %>
+      <%= link_to("") do %>
+        <div class="left_link_thirth" name="model<%= model.id %>">
+          <%= version.name %>
+        </div>
       <% end %>
     <% end %>
   <% end %>
