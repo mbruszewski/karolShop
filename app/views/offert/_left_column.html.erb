@@ -1,5 +1,8 @@
+
+<div name="models">abc</div>
+
 <% for company in @companies %>
-  <%= link_to(root_path) do %>
+  <%= link_to("", onclick: "modelsVisibility") do %>
     <div class="left_link_main">
       <%= company_name(company) %>
     </div>   
@@ -8,16 +11,18 @@
   <!-- HERE I ADD MODELS -->
 
   <% for model in company.models %>
-    <%= link_to(root_path) do %>
-      <div class="left_link_second">
+    <%= link_to("") do %>
+      <div class="left_link_second" name="models">
         <%= model.name %>
       </div>
 
       <!-- HERE I ADD VERSIONS -->
 
       <% for version in model.versions %>
-        <%= link_to(root_path) do %>
-          <div class="left_link_thirth">
+        <%= link_to("") do %>
+
+          <div class="left_link_thirth" name="versions">
+            <%= version.name %>
           </div>
         <% end %>
 

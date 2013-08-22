@@ -5,8 +5,8 @@
       <div class="span4">
 
         <% @left_indexes.each do |i| %>
-          <%= link_to(get_redirect_path) do %>
-            <div class="element">
+          <%= link_to(get_redirect_path(i)) do %>
+            <div class="element" id=i>
               <%= image_tag(get_url(i), class: 'image') %>
               <p class="text"> <%= upcase(get_name(i)) %> </p>
             </div>
@@ -16,8 +16,8 @@
       </div>
       <div class="span4">
         <% @right_indexes.each do |i| %>
-          <%= link_to(get_redirect_path) do %>
-            <div class="element">
+          <%= link_to(get_redirect_path(i)) do %>
+            <div class="element" id=i>
               <%= image_tag(get_url(i), class: 'image') %>
               <p class="text"> <%= upcase(get_name(i)) %> </p>
             </div>

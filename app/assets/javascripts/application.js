@@ -15,3 +15,14 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require_tree .
+//
+
+
+function modelsVisibility() {
+  var v = document.getElementsByName("models").style.display = "none";
+  v[0].style.display = 'none';
+}
+
+function versionsVisibility() {
+
+}

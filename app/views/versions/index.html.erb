@@ -5,10 +5,14 @@
 <center>
   <table>
     <tr>
-      <th><%= t("name") %></th>
+      <td><%= t("model.company") %></td>
+      <td><%= t("model.model") %></td>
+      <td><%= t("model.version") %></td>
     </tr>
     <% for version in @versions %>
       <tr>
+        <td><%= version.model.company.name %></td>
+        <td><%= version.model.name %></td>
         <td><%= version.name %></td>
 
         <td><%= link_to t("show"), version %></td>

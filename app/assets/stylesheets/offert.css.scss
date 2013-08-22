@@ -10,9 +10,11 @@
     padding-top: 5px;
     text-align: left;
     color: white;
+    border-width: 0px;
 
     &:hover {
       font-weight: bold;
+      border-width: 0px;
     }
 }
 
@@ -39,10 +41,15 @@
     background: black;
     color: white;
     font-size: 13px;
-
-
   }
 
-
+  .left_link_thirth {
+    @include links;
+    padding-left: 70px;
+    background: black;
+    color: white;
+    font-size: 12px;
+    padding-top: 0px;
+  }
 
 }

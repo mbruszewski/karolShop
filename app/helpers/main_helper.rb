@@ -8,8 +8,8 @@ module MainHelper
     @companies[index].image_url
   end
 
-  def get_redirect_path
-    offert_index_path 
+  def get_redirect_path(id)
+    offert_index_path + "?id=" + id.to_s
   end
 
   def get_regulation
