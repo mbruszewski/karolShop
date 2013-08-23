@@ -7,7 +7,7 @@
         <p>
           <%= f.label :login, t("user.login") %><br />
 
-		      <% if yield(:title) == t("provide.edit", item: t("model.user")) %>
+		      <% if yield(:title) == t("pages.user_settings.edit_profile") %>
  	   	      <%= f.text_field :login , disabled: true %>
 		      <% else %>
 			      <%= f.text_field :login %>

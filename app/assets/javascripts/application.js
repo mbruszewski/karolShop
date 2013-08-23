@@ -44,7 +44,7 @@ function controlVisibility(what,id) {
   var v1 = document.getElementsByName(str);
 
   for (i=0;i<v1.length;i++){
-    v1[i].style.display = "inline-block";
+      v1[i].style.display = "inline-block";
   }
 }
 

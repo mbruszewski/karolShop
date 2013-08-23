@@ -4,7 +4,7 @@
     <div class="row-fluid">
       <div class="span4">
         <% @left_indexes.each do |i| %>
-          <%= link_to(get_redirect_path(i)) do %>
+          <%= link_to(get_redirect_path(@companies[i].id)) do %>
             <div class="element" id=i>
               <%= image_tag(get_url(i), class: 'image') %>
               <p class="text"> <%= upcase(get_name(i)) %> </p>
@@ -14,7 +14,7 @@
       </div>
       <div class="span4">
         <% @right_indexes.each do |i| %>
-          <%= link_to(get_redirect_path(i)) do %>
+          <%= link_to(get_redirect_path(@companies[i].id)) do %>
             <div class="element" id=i>
               <%= image_tag(get_url(i), class: 'image') %>
               <p class="text"> <%= upcase(get_name(i)) %> </p>
