@@ -1,6 +1,6 @@
 <% provide(:title, t("pages.offert_page")) %>
 
-<div class="space2"></div>
+<div class="space2" onLoad="rendering()"></div>
 
 <div class="offert">
   <div class="container-fluid">
@@ -14,3 +14,9 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  window.onload = rendering();
+</script>
+
+<div class="space2"></div>

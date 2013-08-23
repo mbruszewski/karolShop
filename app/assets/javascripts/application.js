@@ -17,14 +17,31 @@
 //= require_tree .
 //
 
+function rendering(){
+  var param = window.location.search.substring(1);
 
-function hideall(){  
+  var params = { }
+  if (param != null){
+    var param2 = param.split("&");
+
+    for (i=0;i<param2.length;i++){
+      params[i] = param2[i].split("=")[1]; 
+    }
+  }
+  
+  if (params[0] != undefined)
+    controlVisibility("company",params[0]);
+  if (params[1] != undefined)
+    controlVisibility("model",params[1]);
 }
 
-function modelsVisibility(what,id) {
+function hideall(){  
+
+}
+
+function controlVisibility(what,id) {
   str = what+id;
   var v1 = document.getElementsByName(str);
-
 
   for (i=0;i<v1.length;i++){
     v1[i].style.display = "inline-block";
