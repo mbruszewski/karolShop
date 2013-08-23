@@ -1,0 +1,36 @@
+.price {
+  font-size: 18px;
+  color: gold;
+  display: inline;
+  font-weight: bold;
+}
+
+.product {
+  font-size: 15px;
+  
+  .right {
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    display: inline;
+  }
+
+  .description {
+    font-size: 14px;
+    color: gray;
+  }
+
+  .button1 {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    color: white;
+    background: url('hover2.png') repeat-x transparent;
+    border-width: 0px;
+    border-style: none;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

@@ -3,6 +3,8 @@
 
 en:
   hello: "Hello world"
+   
+
 
   pages:
     offert_page: "Offert"
@@ -94,8 +96,13 @@ en:
   product:
     description: "Description"
     price: "Price"
-    stock: "Stock"
+    compatibile_with: "Matching to"
 
   item:
     price: "Price"
     count: "Count"
+
+  offert:
+    to_offert_page: "To offert page" 
+    add_to_order: "Add to order"
+    more_about_product: "More about product"

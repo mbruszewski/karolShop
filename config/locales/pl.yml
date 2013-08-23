@@ -91,10 +91,15 @@ pl:
   product:
     description: "Opis produktu"
     price: "Cena"
-    stock: "Ilość w sklepie"
+    compatibile_with: "Pasujący do"
 
   item:
     price: "Cena"
     count: "Ilość"
 
+
+  offert:
+    to_offert_page: "Do oferty" 
+    add_to_order: "Dodaj do koszyka"
+    more_about_product: "Więcej o produkcie"
 

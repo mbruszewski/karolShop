@@ -24,6 +24,15 @@
           <%= f.label :image_url %><br/>
           <%= f.text_field :image_url %>
         </p>
+        <p>
+          <%= f.label t("model.category") %><br/>
+          <%= f.select(:category_id, Category.all.collect{ |p| [p.name, p.id] }) %>
+        </p>
+        <p>
+          <%= f.label t("model.brand") %><br/>
+          <%= f.select(:brand_id, Brand.all.collect{ |p| [p.name, p.id] }) %>
+        </p>
+
         <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
       <% end %>
     </div>

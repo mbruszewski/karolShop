@@ -2,7 +2,7 @@
 <table>
   <% for product in @products %>
     <div class="header_line"></div>
-    <div class="product">
+    <div class="product_display">
       <div class="image">
         <%= image_tag image_url(product) %>
       </div>
@@ -19,16 +19,15 @@
 
         <div class="horizontal-line"></div>
 
-        <div class="price">
-          <%= t("product.price") + ": " + print_price(product.price) %>
-        </div>
-        
+        <p>
+        <%= t("product.price")  %>:
+        <%= label_tag print_price(product.price), nil, class: "price" %> 
+        </p>
+
         <br/>
         
-        <div class="button1">
-          <%= button_to "Add to order", root_path, class: "button1" %>
-        </div>
-
+        <%= link_to t("offert.more_about_product"), product, class: "button1" %>
+        <%= link_to t("offert.add_to_order"), root_path, class: "button1" %>
       </div>
     </div>
   <% end %>

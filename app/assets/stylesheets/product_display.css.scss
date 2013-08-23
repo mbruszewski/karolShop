@@ -1,6 +1,6 @@
 $txt_color: #616271;
 
-.product {
+.product_display {
   width: 500px;
   padding: 5px;
   margin: 10px;
@@ -29,16 +29,18 @@ $txt_color: #616271;
   .description {
     color: gray;
     font-size: 12px;
+    margin-bottom: 10px;
   }
 
   .button1 {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     height: 30px;
-    width: 100px;
     color: white;
     background: url('hover2.png') repeat-x transparent;
     border-width: 0px;
     border-style: none;
-
     &:hover {
       font-weight: bold;
     }
