@@ -11,37 +11,38 @@
       <div class="span5"> 
         <%= image_tag image_url(@product), size: "400x400" %>
       </div>
-      <div class="span5 offset1">
-        <p>
-          <%= t("model.category") %>:
-          <%= label_tag get_category_name(@product), nil, class: "right" %>
-        </p>
+      <div class="span6">
+        <div class="margin-left">
+          <p>
+            <%= t("model.category") %>:
+            <%= label_tag get_category_name(@product), nil, class: "right" %>
+          </p>
 
-        <p>
-          <%= t("model.brand") %>:
-          <%= label_tag get_brand_name(@product), nil, class: "right" %>
-        </p>
+          <p>
+            <%= t("model.brand") %>:
+            <%= label_tag get_brand_name(@product), nil, class: "right" %>
+          </p>
 
-        <p>
-          <%= t("product.description") %>:
-          <%= label_tag @product.description,nil, class: "description" %>
-        </p>
+          <p>
+            <%= t("product.description") %>:
+            <%= label_tag @product.description,nil, class: "description" %>
+          </p>
 
-        <p>
-          <%= t("product.compatibile_with") %>:
-          <%= label_tag get_all_cars(@product), nil, class: "description" %> 
-        </p>
+          <p>
+            <%= t("product.compatibile_with") %>:
+            <%= label_tag get_all_cars(@product), nil, class: "description" %> 
+          </p>
 
-        <p>
-          <%= t("product.price") %>:
-          <%= label_tag print_price(@product.price), nil, class: "price" %>
-        </p>
+          <p>
+            <%= t("product.price") %>:
+            <%= label_tag print_price(@product.price), nil, class: "price" %>
+          </p>
         
-        <div class="space2"></div>
+          <div class="space2"></div>
          
-        <%= link_to t("offert.to_offert_page"), offert_index_url, class: "button1" %>
-        <%= link_to t("offert.add_to_order"), root_path, class: "button1" %>
-
+          <%= link_to t("offert.to_offert_page"), :back, class: "button1" %>
+          <%= link_to(t("offert.add_to_order"), root_path, class: "button1") if session[:user_id] %>
+        </div>
       </div>
     </div>
   </div>

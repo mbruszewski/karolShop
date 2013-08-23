@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_default_language
 
 	def load_order
-		@order = Order.find_or_initialize_by_id(session[:order_id], status: "nowy", user: current_user)
+		@order = Order.find_or_initialize_by_id(session[:order_id], status: "nowy", user_id: current_user.id)
 		if @order.new_record?
 		  @order.save!
 		  session[:order_id] = @order.id

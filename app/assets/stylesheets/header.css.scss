@@ -3,7 +3,6 @@ $black: rgba(16,16,16,0.1);
 
 @mixin buttons {
   color: white;
-  font-weight: bold;
   background: $hover;
   text-decoration: none;
 }

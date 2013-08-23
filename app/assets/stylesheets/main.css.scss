@@ -74,6 +74,8 @@ $txt_color: #504848;
   .element {
     background: $bg_color;
     color: $txt_color;
+    opacity: 0.5;
+    transition: opacity 1.5s, transform 2s;
 
     .image {
       border-style: solid;
@@ -88,6 +90,8 @@ $txt_color: #504848;
     }
 
     &:hover {
+      transform: rotate(360deg);
+      opacity: 1.0;
       color: white;
       font-weight: bold;
     }

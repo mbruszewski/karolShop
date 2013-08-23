@@ -1,5 +1,11 @@
 # -*- encoding : utf-8 -*-
 KarolShop::Application.routes.draw do
+  get "products_to_versions/index"
+
+  get "products_to_versions/edit"
+
+  get "products_to_versions/new"
+
   resources :regulamins
 
   resources :products

@@ -41,8 +41,10 @@ $txt_color: #616271;
     background: url('hover2.png') repeat-x transparent;
     border-width: 0px;
     border-style: none;
+    opacity: 0.4;
+    transition: opacity 2s;
     &:hover {
-      font-weight: bold;
+      opacity: 1.0;
     }
   }
 }
