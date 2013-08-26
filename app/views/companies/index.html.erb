@@ -4,10 +4,16 @@
 
 <center>
   <table>
-    <tr><th><%= t("name") %></th></tr>
+    <tr>
+      <th><%= t("companies.photo") %></th>
+      <th><%= t("name") %></th>
+      <th><%= t("companies.photo_url") %></th>
+    </tr>
     <% for company in @companies %>
       <tr>
+        <td><%= image_tag image_url(company), size: "100x100" %></td>
         <td><%= company.name %></td>
+        <td><%= company.image_url %></td>
         <td><%= link_to t("edit"), edit_company_path(company) %></td>
         <td><%= link_to t("delete"), company, confirm: t("confirmation"), method: :delete %></td>
       </tr>

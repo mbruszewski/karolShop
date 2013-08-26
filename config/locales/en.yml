@@ -83,6 +83,9 @@ en:
     version: "Version"
     regulamin: "Regulamin"
 
+  companies:
+    photo: "Phorography"
+    photo_url: "Photography url"
 
   user:
     login: "Login"

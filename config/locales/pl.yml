@@ -80,6 +80,10 @@ pl:
     version: "Wersja samochodu"
     regulamin: "Regulamin"
 
+  companies:
+    photo: "Zdjęcie"
+    photo_url: "Url zdjęcia"
+
   user:
     login: "Login (e-mail)"
     password: "Hasło"
