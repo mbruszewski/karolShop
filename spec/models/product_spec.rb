@@ -19,17 +19,8 @@ describe Product do
 
   
 	before {
-		@product = brand.products.create(name: "produkt", description: "jakas tam wiadomosc", price: 12.00, stock: 30)    
+		@product = brand.products.create(name: "produkt", description: "jakas tam wiadomosc", price: 12.00)    
     @product.category = category
-   
-
-    @product.add_model(model)
-    @product.add_model(model2)
-    @product.add_version(version)
-    @product.add_version(version2)
-    @product.add_company(company)
-    @product.add_company(company2)
-
   }
 
 	subject { @product }
@@ -38,7 +29,6 @@ describe Product do
 	it { should respond_to(:name) }
 	it { should respond_to(:description) }
 	it { should respond_to(:price) }
-	it { should respond_to(:stock) }
 	it { should respond_to(:category_id) }
   it { should respond_to(:category) }
 	it { should respond_to(:brand_id) }

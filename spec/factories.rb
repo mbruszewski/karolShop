@@ -48,7 +48,6 @@ FactoryGirl.define do
 		sequence(:name) { |n| "product_#{n}" }
 		description "abc"
 		price 12.50 
-		stock 15
 		category
 		brand
 	end

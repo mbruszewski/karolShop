@@ -13,7 +13,7 @@
     <% for order in @orders %>
       <tr>
         <td><%= order.status %></td>
-        <td><%= order.user_id %></td>
+        <td><%= order.user.login %></td>
         <td><%= order.address_id %></td>
         <td><%= link_to "Show", order %></td>
         <td><%= link_to "Edit", edit_order_path(order) %></td>

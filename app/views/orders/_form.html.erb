@@ -1,16 +1,29 @@
-<%= form_for @order do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :status %><br />
-    <%= f.text_field :status %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :address_id %><br />
-    <%= f.number_field :address_id %>
-  </p>
-  <p><%= f.submit, class: "btn btn-large btn-primary" %></p>
-<% end %>
+
+<div class="space2"></div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 offset4">
+
+      <%= form_for @order do |f| %>
+        <%= f.error_messages %>
+        <p>
+          <%= f.label :status %><br />
+          <%= f.text_field :status, disabled: true  %>
+        </p>
+        <p>
+          <%= f.label :user_id %><br />
+          <%= text_field :current_user, :login, disabled: true %>
+        </p>
+        <p>
+          <%= f.label :address_id %><br />
+          <%= f.select :address_id, 
+            current_user.addresses.all.collect{ |p| [p.city + ", " + p.street_and_number, p.id] } %>
+        </p>
+        <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="space2"></div>

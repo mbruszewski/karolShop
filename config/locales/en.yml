@@ -4,8 +4,8 @@
 en:
   hello: "Hello world"
    
-
-
+  need_new_address: "You need to add address first"
+  
   pages:
     offert_page: "Offert"
     main_page: "Main page"
@@ -107,3 +107,8 @@ en:
     to_offert_page: "To offert page" 
     add_to_order: "Add to order"
     more_about_product: "More about product"
+
+  order:
+    status: "Status"
+    user: "Użytkownik"
+    address: "Adres"

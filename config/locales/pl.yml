@@ -2,6 +2,8 @@
 pl:
   hello: "Hello world"
 
+  need_new_address: "Musisz wpierw dodać adres"
+
   pages:
     offert_page: "Oferta"
     main_page: "Strona główna"
@@ -102,4 +104,9 @@ pl:
     to_offert_page: "Do oferty" 
     add_to_order: "Dodaj do koszyka"
     more_about_product: "Więcej o produkcie"
+
+  order:
+    status: "Status"
+    user: "Użytkownik"
+    address: "Adres" 
 

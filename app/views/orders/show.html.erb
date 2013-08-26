@@ -1,20 +1,72 @@
 <% title "Order" %>
 
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
-<p>
-  <strong>User:</strong>
-  <%= @order.user_id %>
-</p>
-<p>
-  <strong>Address:</strong>
-  <%= @order.address_id %>
-</p>
+<div class="space2"></div>
 
-<p>
-  <%= link_to "Edit", edit_order_path(@order) %> |
-  <%= link_to "Destroy", @order, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", orders_path %>
-</p>
+<div class="order">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span4 offset4">
+        <div class="top">
+        <p>
+          <%= t("order.status") %>:
+          <%= @order.status %>
+        </p>
+        <p>
+          <%= t("order.user") %>:
+          <%= @order.user.login %>
+        </p>
+        <p>
+          <%= t("order.address") %>:
+          <%= @order.address.city + ", " + @order.address.street_and_number %>
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space2"></div>
+
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span8 offset2">
+        <% for order_item in @order.order_items %>
+
+          <div class="header_line"></div>
+
+          <div class="order_item">
+            <div class="image">
+              <%= image_tag image_url(order_item.product) %>
+            </div>
+            <div class="right">
+              <div class="title">
+                <%= upcase(order_item.name) %>
+              </div>
+              <div class="horizontal-line"></div>
+
+              <p>
+                <%= t("product.price")  %>:
+                <%= label_tag print_price(order_item.price), nil, class: "price" %> 
+              </p>
+
+              <br/>
+            </div>
+          </div>
+        <% end %> 
+      </div>
+    </div>
+  </div>
+
+  <div class="space2"></div>
+
+  <center>
+    <p>
+      <%= link_to t("edit"), edit_order_path(@order) %> |
+      <%= link_to t("delete"), @order, :confirm => 'Are you sure?', :method => :delete %> |
+      <%= link_to t("index"), orders_path %>
+    </p>
+  </center>
+</div>
+
+
+<div class="space2"></div>

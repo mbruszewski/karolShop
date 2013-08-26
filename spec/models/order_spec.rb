@@ -18,10 +18,15 @@ describe Order do
 	it { should respond_to(:status) }
 	it { should respond_to(:user_id) }
 	it { should respond_to(:address_id) }
+  it { should respond_to(:order_items) }
+
+
 	its(:user_id) 		{ should == user.id }
 	its(:user_id) 		{ should_not == nil }
 	its(:address_id) 	{ should == address.id }
 	its(:address_id) 	{ should_not == nil }
+
+  
 
 
 	describe "should have default status" do

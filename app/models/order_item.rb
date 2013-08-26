@@ -1,6 +1,6 @@
 # -*- encoding : utf-8 -*-
 class OrderItem < ActiveRecord::Base
-  attr_accessible :count, :name, :price
+  attr_accessible :count, :name, :price, :order_id, :product_id
 
 	validates :count, presence: :true
 	validates :name, presence: :true
