@@ -2,8 +2,8 @@
 class CreateProductsVersions < ActiveRecord::Migration
   def change
     create_table :products_versions do |t|
-      t.string :product_id
-      t.string :version_id
+      t.integer :product_id
+      t.integer :version_id
     end
   end
 end
