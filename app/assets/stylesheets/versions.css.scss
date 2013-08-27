@@ -1,3 +1,21 @@
 // Place all the styles related to the versions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.versions{
+  position: relative;
+  overflow: hidden; 
+
+  .item {
+    background: black;
+    margin-top: 5px; 
+  }
+
+  .item2 {
+    background: black;
+    margin-left: 30px;
+
+  }
+
+}

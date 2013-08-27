@@ -2,26 +2,37 @@
 
 <div class="space_table"></div>
 
+<div class="versions">
 <center>
   <table>
     <tr>
-      <td><%= t("model.company") %></td>
-      <td><%= t("model.model") %></td>
-      <td><%= t("model.version") %></td>
+      <th><%= t("company.photo") %></th>
+      <th>Nazwa producenta</th>
+      <th>Nazwa modelu i wersji</th>
     </tr>
-    <% for version in @versions %>
+    <% for company in @companies %>
       <tr>
-        <td><%= version.model.company.name %></td>
-        <td><%= version.model.name %></td>
-        <td><%= version.name %></td>
-
-        <td><%= link_to t("show"), version %></td>
-        <td><%= link_to t("edit"), edit_version_path(version) %></td>
-        <td><%= link_to t("delete"), version, :confirm => t("confirmation"), :method => :delete %></td>
+        <td><%= image_tag image_url(company), size: "100x100" %></td>
+        <td><%= company.name %></td>
+        <td>
+        <% for model in company.models %>
+          <div class="item">
+            <%= model.name %>
+            <% for version in model.versions %>
+              <div class="item2">
+                <%= link_to t("edit"), edit_version_path(version) %>
+                -&nbsp<%= version.name %>
+                <%= link_to t("delete"), version, confirm: t("confirmation"), method: :delete %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+        </td>
       </tr>
     <% end %>
   </table>
 </center>
+</div>
 
 <div class="space_table"></div>
 

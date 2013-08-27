@@ -48,7 +48,10 @@
                 <%= t("product.price")  %>:
                 <%= label_tag print_price(order_item.price), nil, class: "price" %> 
               </p>
-
+              <p>
+                item count:
+                <%= order_item.count %>
+              </p>
               <br/>
             </div>
           </div>
@@ -59,13 +62,6 @@
 
   <div class="space2"></div>
 
-  <center>
-    <p>
-      <%= link_to t("edit"), edit_order_path(@order) %> |
-      <%= link_to t("delete"), @order, :confirm => 'Are you sure?', :method => :delete %> |
-      <%= link_to t("index"), orders_path %>
-    </p>
-  </center>
 </div>
 
 

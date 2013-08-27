@@ -14,16 +14,13 @@ class OrdersController < ApplicationController
     session[:product_id] = params[:product_id]
     if current_user.addresses.count == 0
       redirect_to new_address_path, notice: t("need_new_address")
-    end
-    if session[:order_id]
-      pp session[:order_id]
+    elsif session[:order_id]
       create_item()
     end
     @order = Order.new
   end
 
   def create
-
     @order = Order.new(params[:order])
     @order.user = current_user
     if @order.save
@@ -61,11 +58,17 @@ class OrdersController < ApplicationController
       product = Product.find(product_id)
       
       @order = Order.find(session[:order_id])
-      @orderItem = @order.order_items.new()
-      @orderItem.product_id = product.id
-      @orderItem.count = 1
-      @orderItem.name = product.name
-      @orderItem.price = product.price
+
+      if @order.order_items.find_by_product_id(product.id)
+        @orderItem = @order.order_items.find_by_product_id(product.id)
+        @orderItem.count = @orderItem.count + 1
+      else
+        @orderItem = @order.order_items.new()
+        @orderItem.product_id = product.id
+        @orderItem.count = 1
+        @orderItem.name = product.name
+        @orderItem.price = product.price
+      end
 
 	  	if @orderItem.save
 			  redirect_to current_user.orders.last, notice: t("flash.new", item: t("controller.add_order_item"))

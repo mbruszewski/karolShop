@@ -2,7 +2,7 @@
 class VersionsController < OnlyAdminController
 
 	def index
-		@versions = Version.all	
+    @companies = Company.all  
 	end
 
 	def edit

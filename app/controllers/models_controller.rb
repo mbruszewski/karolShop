@@ -3,7 +3,7 @@ class ModelsController < OnlyAdminController
 	@controller_string = "model samochodu"
 
 	def index
-		@models = Model.all
+    @companies = Company.find(:all, order: "name")
 	end
 		
 	def new
@@ -25,7 +25,7 @@ class ModelsController < OnlyAdminController
 	
 	def update
 		@model = Model.find(params[:id])
-		if @model.update_attributes(params[:id])
+		if @model.update_attributes(params[:model])
 			redirect_to models_url, notice: t("flash.edit", item: t("controller.model"))
 		end
 	end
