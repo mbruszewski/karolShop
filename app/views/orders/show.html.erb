@@ -1,4 +1,4 @@
-<% title "Order" %>
+<% provide(:title, t("offert.offert")) %>
 
 <div class="space2"></div>
 
@@ -19,6 +19,10 @@
           <%= t("order.address") %>:
           <%= @order.address.city + ", " + @order.address.street_and_number %>
         </p>
+        <center>
+          <%= link_to t("order.change"), edit_order_path(@order), class: "linki" %>
+          <%= link_to t("submit"), root_path, class: "linki" %>
+        </center>
         </div>
       </div>
     </div>
@@ -38,30 +42,33 @@
             <div class="image">
               <%= image_tag image_url(order_item.product) %>
             </div>
-            <div class="right">
-              <div class="title">
+            <div class="title">
                 <%= upcase(order_item.name) %>
-              </div>
-              <div class="horizontal-line"></div>
-
+            </div>
+            <div class="horizontal-line"></div>
+            <div class="right">
               <p>
                 <%= t("product.price")  %>:
-                <%= label_tag print_price(order_item.price), nil, class: "price" %> 
+                <%= label_tag print_price(order_item.price), nil, class: "price" %>
               </p>
               <p>
-                item count:
+                <%= t("order.count") %>:
                 <%= order_item.count %>
+                <%= link_to "+", root_path, class: "linki2" %>
+                <%= link_to "-", root_path, class: "linki2" %>
               </p>
-              <br/>
+              </br>
+              <p>
+                <%= link_to t("product.description"), root_path, class: "linki" %>
+                <%= link_to "Usuń przedmiot", root_path, class: "linki" %>
+              </p>
             </div>
           </div>
         <% end %> 
       </div>
     </div>
   </div>
-
   <div class="space2"></div>
-
 </div>
 
 

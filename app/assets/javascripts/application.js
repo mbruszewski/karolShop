@@ -35,10 +35,6 @@ function rendering(){
     controlVisibility("model",params[1]);
 }
 
-function hideall(){  
-
-}
-
 function controlVisibility(what,id) {
   str = what+id;
   var v1 = document.getElementsByName(str);
@@ -48,6 +44,4 @@ function controlVisibility(what,id) {
   }
 }
 
-function versionsVisibility() {
 
-}

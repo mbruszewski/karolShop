@@ -20,8 +20,8 @@
             <%= model.name %>
             <% for version in model.versions %>
               <div class="item2">
-                <%= link_to t("edit"), edit_version_path(version) %>
                 -&nbsp<%= version.name %>
+                <%= link_to t("edit"), edit_version_path(version) %>
                 <%= link_to t("delete"), version, confirm: t("confirmation"), method: :delete %>
               </div>
             <% end %>

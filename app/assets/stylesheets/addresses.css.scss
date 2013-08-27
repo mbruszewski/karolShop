@@ -1,0 +1,48 @@
+$color: white;
+$button_red: url('hover2.png') repeat-x transparent;
+
+.addresses {
+
+  table {
+  }
+
+  tr {
+	  width: 100px;
+    font-size: 17px;
+  }
+
+  table,tr,th,td {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-width: 0px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  th {
+	  font-size: 17px;
+	  color: $color;
+	  font-weight: bold;
+    text-align: center;
+  }
+
+  .linki {
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 30px;
+    color: white;
+    background: $button_red;
+    border-width: 0px;
+    border-style: none;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.7s;
+    &:hover {
+      opacity: 1.0;
+    }
+  }
+
+
+}

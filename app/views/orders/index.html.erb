@@ -3,6 +3,7 @@
 
 <div class="space_table"></div>
 
+<div class="addresses">
 <center>
   <table>
     <tr>
@@ -11,16 +12,21 @@
       <th>Address</th>
     </tr>
     <% for order in @orders %>
+      
       <tr>
         <td><%= order.status %></td>
         <td><%= order.user.login %></td>
-        <td><%= order.address_id %></td>
-        <td><%= link_to "Show", order %></td>
-        <td><%= link_to "Edit", edit_order_path(order) %></td>
-        <td><%= link_to "Destroy", order, :confirm => 'Are you sure?', :method => :delete %></td>
+        <td><%= order.address.city + ", " + order.address.street_and_number %></td>
+        <td width="280">
+          <%= link_to t("show"), order, class: "linki" %>
+          <%= link_to t("order.edit_address"), edit_order_path(order), class: "linki" %>
+          <%= link_to t("delete"), order, :confirm => 'Are you sure?', :method => :delete, class: "linki" %>
+        </td>
       </tr>
+
     <% end %>
   </table>
 </center>
+</div>
 
 <div class="space_table"></div>

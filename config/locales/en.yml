@@ -107,11 +107,15 @@ en:
     count: "Count"
 
   offert:
-    to_offert_page: "To offert page" 
+    offert: "Offert"
+    back: "Get back" 
     add_to_order: "Add to order"
     more_about_product: "More about product"
 
   order:
+    change: "Change"
+    edit_address: "Edit address"
+    count: "Count"
     status: "Status"
-    user: "Użytkownik"
-    address: "Adres"
+    user: "User"
+    address: "Address"

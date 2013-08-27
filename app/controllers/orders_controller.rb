@@ -46,6 +46,7 @@ class OrdersController < ApplicationController
 
   def destroy
     @order = current_user.orders.find(params[:id])
+    session[:order_id] = nil
     @order.destroy
     redirect_to orders_url, :notice => "abc"
   end

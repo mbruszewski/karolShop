@@ -40,8 +40,10 @@
         
           <div class="space2"></div>
          
-          <%= link_to t("offert.to_offert_page"), :back, class: "button1" %>
-          <%= link_to(t("offert.add_to_order"), root_path, class: "button1") if session[:user_id] %>
+          <%= link_to t("offert.back"), :back, class: "button1" %>
+          <%= link_to(t("offert.add_to_order"),
+                    new_order_path(product_id: @product.id),
+                    class: "button1") if session[:user_id] %>
         </div>
       </div>
     </div>

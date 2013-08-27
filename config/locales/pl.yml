@@ -105,11 +105,15 @@ pl:
 
 
   offert:
-    to_offert_page: "Do oferty" 
+    offert: "Zamówienie"
+    back: "Powrót" 
     add_to_order: "Dodaj do koszyka"
     more_about_product: "Więcej o produkcie"
 
   order:
+    change: "Zmień"
+    edit_address: "Edytuj adres"
+    count: "Ilość"
     status: "Status"
     user: "Użytkownik"
     address: "Adres" 

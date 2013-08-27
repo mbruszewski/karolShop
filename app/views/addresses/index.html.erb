@@ -2,6 +2,8 @@
 
 
 <div class="space_table"></div>
+
+<div class="addresses">
   <center>
     <table>
       <tr>
@@ -14,10 +16,14 @@
           <td><%= address.city %></td>
           <td><%= address.street_and_number %></td>
           <td><%= address.post_code %></td>
-          <td><%= link_to t("edit"), edit_address_path(address) %></td>
-          <td><%= link_to t("delete"), address, :confirm => t("confirmation"), :method => :delete %></td>
+          <td width=200>
+            <%= link_to t("edit"), edit_address_path(address), class: "linki" %>
+            <%= link_to t("delete"), address, :confirm => t("confirmation"), :method => :delete, class: "linki" %>
+          </td>
         </tr>
       <% end %>
     </table>
   </center>
+</div>
+
 <div class="space_table"></div>
