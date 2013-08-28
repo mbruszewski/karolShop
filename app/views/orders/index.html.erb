@@ -18,16 +18,16 @@
         <td><%= order.user.login %></td>
         <td><%= order.address.city + ", " + order.address.street_and_number %></td>
         <td width="280">
-          <%= link_to t("show"), order, class: "linki" %>
-          <%= link_to t("order.edit_address"), edit_order_path(order), class: "linki" %>
-          <%= link_to t("delete"), order, :confirm => 'Are you sure?', :method => :delete, class: "linki" %>
+          <%= link_to t("show"), order, class: "red_button" %>
+          <%= link_to t("order.edit_address"), edit_order_path(order), class: "red_button" %>
+          <%= link_to t("delete"), order, :confirm => 'Are you sure?', :method => :delete, class: "red_button" %>
         </td>
       </tr>
 
     <% end %>
   </table>
   </br>
-  <%= link_to t("pages.user_settings.new_order"), new_order_path, class: "linki" %>
+  <%= link_to t("pages.user_settings.new_order"), new_order_path, class: "red_button" %>
 </center>
 </div>
 
