@@ -19,6 +19,8 @@ en:
       your_addresses: "Your addresses"
       add_new_address: "Add new address"
       orders: "Orders"
+      all_orders: "All orders"
+      new_order: "New order"
     admin_options:
       index: "Admin options"
       all_companies: "All car companies"
@@ -35,7 +37,6 @@ en:
       new_product: "New product"
       all_regulamins: "All regulations"
       new_regulamin: "New regulation"
-    
 
   flash:
     new: "Succesfully added %{item}!"

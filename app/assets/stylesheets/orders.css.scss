@@ -1,5 +1,5 @@
 $button_red: url('hover2.png') repeat-x transparent;
-$button_blue: url('hover.png') repeat-x transparent;
+$button_blue: url('hover2.png') repeat-x transparent;
 
 .order {
   .top {
@@ -9,7 +9,6 @@ $button_blue: url('hover.png') repeat-x transparent;
     padding: 15px;
 
   }
-
 
   .order_item {
     overflow: hidden;
@@ -22,6 +21,10 @@ $button_blue: url('hover.png') repeat-x transparent;
     float: left;
     width: 100px;
     vertical-align: bottom; 
+  }
+
+  .price {
+    font-size: 15px;
   }
 
   .right {
@@ -51,10 +54,12 @@ $button_blue: url('hover.png') repeat-x transparent;
     padding-right: 15px;
     height: 30px;
     color: white;
+    font-weight: bold;
     background: $button_blue;
     border-width: 0px;
     border-style: none;
     text-decoration: none;
+    border-radius: 15px;
     opacity: 0.5;
     transition: opacity 0.7s;
     &:hover {

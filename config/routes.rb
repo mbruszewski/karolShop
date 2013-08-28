@@ -34,6 +34,11 @@ KarolShop::Application.routes.draw do
 
   match "/regulamin" => "regulamins#reg_page", as: :reg_page
 
+  match "/submit" => "orders#submit_order", as: :submit
+  match "/increase" => "orders#increase_count", as: :increase
+  match "/decrease" => "orders#decrease_count", as: :decrease
+  match "/delete_item" => "orders#remove_order_item", as: :delete_item
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

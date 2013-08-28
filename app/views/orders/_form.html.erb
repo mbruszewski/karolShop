@@ -12,11 +12,11 @@
           <%= f.text_field :status, disabled: true  %>
         </p>
         <p>
-          <%= f.label :user_id %><br />
+          <%= f.label :user_id, t("name") %><br />
           <%= text_field :current_user, :login, disabled: true %>
         </p>
         <p>
-          <%= f.label :address_id %><br />
+          <%= f.label :address_id, t("order.address") %><br />
           <%= f.select :address_id, 
             current_user.addresses.all.collect{ |p| [p.city + ", " + p.street_and_number, p.id] } %>
         </p>

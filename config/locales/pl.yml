@@ -17,6 +17,8 @@ pl:
       your_addresses: "Twoje adresy"
       add_new_address: "Dodaj nowy adres"
       orders: "Zamówienia"
+      all_orders: "Wszystkie zamówienia"
+      new_order: "Nowe zamówienie"
     admin_options:
       index: "Opcje admina"
       all_companies: "Wszystkie marki samochodów"

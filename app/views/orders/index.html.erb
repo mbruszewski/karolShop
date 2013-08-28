@@ -8,8 +8,8 @@
   <table>
     <tr>
       <th>Status</th>
-      <th>User</th>
-      <th>Address</th>
+      <th><%= t("order.user") %></th>
+      <th><%= t("order.address") %></th>
     </tr>
     <% for order in @orders %>
       
@@ -26,6 +26,8 @@
 
     <% end %>
   </table>
+  </br>
+  <%= link_to t("pages.user_settings.new_order"), new_order_path, class: "linki" %>
 </center>
 </div>
 
