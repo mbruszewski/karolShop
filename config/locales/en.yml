@@ -114,6 +114,7 @@ en:
     more_about_product: "More about product"
 
   order:
+    total: "Total"
     change: "Change"
     edit_address: "Edit address"
     count: "Count"

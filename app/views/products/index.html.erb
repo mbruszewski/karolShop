@@ -5,12 +5,14 @@
 <center>
   <table>
     <tr>
+      <th><%= t("companies.image") %></th>
       <th><%= t("name") %></th>
       <th><%= t("price.description") %></th>
       <th><%= t("product.price") %></th>
     </tr>
     <% for product in @products %>
       <tr>
+        <td><%= image_tag image_url(product), size: "100x100" %></td>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.price %></td>

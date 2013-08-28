@@ -9,7 +9,9 @@ class OrderItem < ActiveRecord::Base
 	belongs_to :order
 	belongs_to :product
 
-
+  def subtotal
+    return count.to_f * price.to_f
+  end
 
 end
 

@@ -8,4 +8,12 @@ class Order < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :address
 	has_many :order_items, class_name: "OrderItem"
+
+  def total
+    total_price = 0.0
+    order_items.each do |item|
+      total_price += item.subtotal
+    end
+    return total_price
+  end
 end

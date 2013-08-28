@@ -1,0 +1,94 @@
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+$button_red: url('hover2.png') repeat-x transparent;
+$background: url('background_color.jpg') repeat;
+$bg_color: #161515;
+$txt_color: #504848;
+
+
+html {
+  background: $background;
+  color: white;
+  font-family: "Times New Roman";
+  overflow-y: scroll;
+}
+
+body {
+  background: $background;
+  color: white;
+  font-family: "Times New Roman";
+}
+
+.flash {
+  background: black;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.space {
+  height: 10px;
+}
+
+.space2 {
+  height: 30px;
+}
+
+.main-content {
+  color: white;
+  font-family: "Times New Roman";
+  background: black;
+  width: 830px;
+  text-align: left;
+
+  .title {
+    text-align: center; 
+    color: white;
+  }
+}
+
+
+.nationalization {
+  text-align: right;
+  margin-right: 15px;
+}
+
+#top_image {
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+
+.red_button {
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;  
+  height: 30px;
+  color: white;
+  background: $button_red;
+  border-width: 0px;
+  border-style: none;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 0.7s;
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
+
+

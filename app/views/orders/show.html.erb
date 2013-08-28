@@ -18,7 +18,11 @@
         <p>
           <%= t("order.address") %>:
           <%= @order.address.city + ", " + @order.address.street_and_number %>
-          </p>
+        </p>
+        <p>
+          <%= t("order.total") %>:
+          <%= label_tag print_price(@order.total), nil, class: "price" %>
+        </p>
           <% if @order.status == "nowy" %>
             <center>
               <%= link_to t("order.change"), edit_order_path(@order), class: "linki" %>

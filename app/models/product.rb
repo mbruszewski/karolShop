@@ -5,10 +5,6 @@ class Product < ActiveRecord::Base
 	belongs_to :category
 	belongs_to :brand
 
-	#has_many :companies_products, through: :companies
-	#has_many :models_products, through: :models
-	#has_many :products_versions, through: :versions
-
   has_many :companies_products, class_name: "CompaniesProducts"
   has_many :companies, through: :companies_products, source: "company"
 

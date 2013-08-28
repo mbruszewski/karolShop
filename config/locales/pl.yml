@@ -113,6 +113,7 @@ pl:
     more_about_product: "Więcej o produkcie"
 
   order:
+    total: "Razem"
     change: "Zmień"
     edit_address: "Edytuj adres"
     count: "Ilość"
