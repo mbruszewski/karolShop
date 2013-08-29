@@ -1,5 +1,8 @@
 # -*- encoding : utf-8 -*-
 class ProductsController < ApplicationController
+  before_filter :admin_user, only: [:index, :new, :create, :edit, :update, :destroy]
+
+  
   def index
     @products = Product.all
   end

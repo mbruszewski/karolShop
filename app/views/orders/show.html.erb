@@ -25,8 +25,8 @@
         </p>
           <% if @order.status == "nowy" %>
             <center>
-              <%= link_to t("order.change"), edit_order_path(@order), class: "linki" %>
-              <%= link_to t("submit"), submit_path(id: @order), confirm: "abc", class: "linki" %>
+              <%= link_to t("order.change"), edit_order_path(@order), class: "red_button" %>
+              <%= link_to t("submit"), submit_path(id: @order), confirm: "abc", class: "red_button" %>
             </center>
           <% end %>
         </div>
@@ -58,13 +58,13 @@
               <p>
                 <%= t("order.count") %>:
                 <%= order_item.count %>
-                <%= link_to "+", increase_path(order_id: @order, order_item_id: order_item), class: "linki2" %>
-                <%= link_to "-", decrease_path(order_id: @order, order_item_id: order_item), class: "linki2" %>
+                <%= link_to "+", increase_path(order_id: @order, order_item_id: order_item), class: "round_button" %>
+                <%= link_to "-", decrease_path(order_id: @order, order_item_id: order_item), class: "round_button" %>
               </p>
               </br>
               <p>
-                <%= link_to t("product.description"), order_item.product, class: "linki" %>
-                <%= link_to "Usuń przedmiot", root_path, class: "linki" %>
+                <%= link_to t("product.description"), order_item.product, class: "red_button" %>
+                <%= link_to "Usuń przedmiot", root_path, class: "red_button" %>
               </p>
             </div>
           </div>

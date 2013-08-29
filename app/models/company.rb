@@ -2,8 +2,8 @@
 class Company < ActiveRecord::Base
   attr_accessible :image_url, :name
 
-  has_many :companies_products
-  has_many :products, through: :companies_products, source: "product"
+  has_many :products_cars
+  has_many :products, through: :products_cars, source: "product"
   
   has_many :models, dependent: :destroy
 	

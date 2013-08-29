@@ -1,4 +1,4 @@
-# -*- encoding : utf-8 -*-
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130821110840) do
+ActiveRecord::Schema.define(:version => 20130828135702) do
 
   create_table "addresses", :force => true do |t|
     t.string   "city"
@@ -41,21 +41,11 @@ ActiveRecord::Schema.define(:version => 20130821110840) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "companies_products", :force => true do |t|
-    t.integer "company_id"
-    t.integer "product_id"
-  end
-
   create_table "models", :force => true do |t|
     t.string   "name"
     t.integer  "company_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "models_products", :force => true do |t|
-    t.string "model_id"
-    t.string "product_id"
   end
 
   create_table "order_items", :force => true do |t|
@@ -87,9 +77,13 @@ ActiveRecord::Schema.define(:version => 20130821110840) do
     t.string   "image_url"
   end
 
-  create_table "products_versions", :force => true do |t|
-    t.integer "product_id", :limit => 255
-    t.integer "version_id", :limit => 255
+  create_table "products_cars", :force => true do |t|
+    t.string   "product_id"
+    t.string   "company_id"
+    t.string   "model_id"
+    t.string   "version_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "regulamins", :force => true do |t|

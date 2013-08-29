@@ -1,13 +1,7 @@
 # -*- encoding : utf-8 -*-
 KarolShop::Application.routes.draw do
-  get "products_to_versions/index"
-
-  get "products_to_versions/edit"
-
-  get "products_to_versions/new"
 
   resources :regulamins
-
   resources :products
   resources :categories
   resources :orders
@@ -15,14 +9,12 @@ KarolShop::Application.routes.draw do
 	resources :users
 	resources :main
 	resources :sessions
-	
 	resources :order_items
 	resources :versions
 	resources :models	
 	resources :companies
 	resources :brands
   resources :offert
-  
 
 	root to: "main#index"
 
@@ -39,6 +31,8 @@ KarolShop::Application.routes.draw do
   match "/decrease" => "orders#decrease_count", as: :decrease
   match "/delete_item" => "orders#remove_order_item", as: :delete_item
 
+  match "/add_car" => "products_cars#new", as: :add_car
+  match "/remove_car" => "products_cars#delete", as: :remove_Car
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
