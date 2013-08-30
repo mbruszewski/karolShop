@@ -21,7 +21,7 @@
 
         <p>
           <%= f.label :model %>
-          <%= f.select(:model_id, Model.all.collect{ |p| [p.name, p.id] }) %>
+          <%= f.select(:model_id, Model.all.collect{ |p| [p.name, p.id] }, {}, { onChange: 'alert("a")'}) %>
         </p>
 
 

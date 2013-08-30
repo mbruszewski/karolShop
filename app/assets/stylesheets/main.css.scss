@@ -17,12 +17,12 @@ $txt_color: #504848;
   }
 
   .element {
+    margin-bottom: 10px;
     background: $bg_color;
     color: $txt_color;
     opacity: 0.5;
-    transition: opacity 1s, transform 1s;
+    transition: opacity 1s, transform 1s, box-shadow 1s;
     caption-side: bottom;
-
 
 
     .image {
@@ -38,6 +38,8 @@ $txt_color: #504848;
     }
 
     &:hover {
+      box-shadow: 5px 5px 5px red; 
+      box-shadow-opacity: 0.5;
       transform: scale(1.1,1.1);
       opacity: 1.0;
       color: white;
