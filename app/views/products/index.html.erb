@@ -27,7 +27,7 @@
 
         <td><%= product.price %></td>
         
-        <td><%= link_to "add car", add_car_path(id: product.id) %></td>
+        <td><%= link_to "add car", new_products_car_path(id: product.id) %></td>
         <td><%= link_to t("show"), product %></td>
         <td><%= link_to t("edit"), edit_product_path(product) %></td>
         <td><%= link_to t("delete"), product, :confirm => t("confirmation"), :method => :delete %></td>

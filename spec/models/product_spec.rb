@@ -22,6 +22,14 @@ describe Product do
 		@product = Product.create(name: "produkt", description: "jakas tam wiadomosc", price: 12.00)    
     @product.category = category
     @product.brand = brand
+
+    @product_cars = ProductsCars.new
+    @product_cars.product = product
+    @product_cars.company = company
+    @product_cars.model = model
+    @product_cars.version = version
+    include 'pry'
+    binding.pry
   }
 
 	subject { @product }

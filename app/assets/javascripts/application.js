@@ -28,7 +28,6 @@ function rendering(){
       params[i] = param2[i].split("=")[1]; 
     }
   }
-  
   if (params[0] != undefined)
     controlVisibility("company",params[0]);
   if (params[1] != undefined)
@@ -43,5 +42,7 @@ function controlVisibility(what,id) {
       v1[i].style.display = "inline-block";
   }
 }
+
+
 
 

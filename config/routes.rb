@@ -15,6 +15,7 @@ KarolShop::Application.routes.draw do
 	resources :companies
 	resources :brands
   resources :offert
+  resources :products_cars
 
 	root to: "main#index"
 
@@ -31,8 +32,6 @@ KarolShop::Application.routes.draw do
   match "/decrease" => "orders#decrease_count", as: :decrease
   match "/delete_item" => "orders#remove_order_item", as: :delete_item
 
-  match "/add_car" => "products_cars#new", as: :add_car
-  match "/remove_car" => "products_cars#delete", as: :remove_Car
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

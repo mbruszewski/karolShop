@@ -52,5 +52,19 @@ $black: rgba(16,16,16,0.1);
 
 .header_line {
   height: 1px;
+
+/* Safari 4-5, Chrome 1-9 */ 
+	background: -webkit-gradient(linear, left top, right top, black 5%, white 50%, black 95%);
+/* Safari 5.1, Chrome 10+ */ 
+  background: -webkit-linear-gradient(left, black 5%, white 50%, black 95%); 
+/* Firefox 3.6+ */ 
+  background: -moz-linear-gradient(left, black 5%, white 50%, black 95%); 
+/* IE 10 */ 
+  background: -ms-linear-gradient(left, black 5%, white 50%, black 95%); 
+/* Opera 11.10+ */ 
+  background: -o-linear-gradient(left, black 5%, white 50%, black 95%);
+
+
+
   background: linear-gradient(to right,black 5%, white 50%, black 95%);
 }
