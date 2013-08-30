@@ -1,0 +1,40 @@
+<%= provide(:title, "new products-cars") %>
+
+<div class="space2"></div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span4 offset4">
+
+      <%= form_for (:product_car) do |f| %>
+        <%= f.error_messages %>
+        <p>
+          <%= f.label :product %>
+          <%= text_field :product, :name, disabled: :true %>
+        </p>
+        <p>
+          <%= f.label :company %>
+          <%= f.select(:company_id, Company.all.collect{ |p| [p.name, p.id] }) %>
+        </p>
+
+
+
+        <p>
+          <%= f.label :model %>
+          <%= f.select(:model_id, Model.all.collect{ |p| [p.name, p.id] }) %>
+        </p>
+
+
+        <p>
+          <%= f.label :version %>
+          <%= f.select(:version_id, Version.all.collect{ |p| [p.name, p.id] }) %>
+        </p>
+
+        <p><%= f.submit t("submit"), class: "btn btn-large btn-primary" %></p>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+<div class="space2"></div>
