@@ -9,11 +9,9 @@ class ProductsCarsController < OnlyAdminController
   def create
     @products_cars = ProductsCar.new(params[:products_car])
     if @products_cars.save
-      debugger
       redirect_to root_path, notice: "pomyslnie dodano"
     else
-      debugger
-      render action: 'new'
+      redirect_to new_products_car_path(id: @products_cars.product_id), notice: "Produkt byl juz dodany do tej kategorii"
     end
   end
 

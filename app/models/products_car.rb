@@ -11,5 +11,6 @@ class ProductsCar < ActiveRecord::Base
   validates :model, presence: :true
   validates :version, presence: :true
 
+  validates_uniqueness_of :product_id, scope: [:company_id, :model_id, :version_id]
 
 end

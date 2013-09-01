@@ -76,4 +76,11 @@ FactoryGirl.define do
 		product
 	end
 
+  factory :products_car do
+    product
+    company
+    model
+    version
+  end
+
 end

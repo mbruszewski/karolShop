@@ -22,14 +22,6 @@ describe Product do
 		@product = Product.create(name: "produkt", description: "jakas tam wiadomosc", price: 12.00)    
     @product.category = category
     @product.brand = brand
-
-    @product_cars = ProductsCars.new
-    @product_cars.product = product
-    @product_cars.company = company
-    @product_cars.model = model
-    @product_cars.version = version
-    include 'pry'
-    binding.pry
   }
 
 	subject { @product }
@@ -43,7 +35,7 @@ describe Product do
 	it { should respond_to(:brand_id) }
   it { should respond_to(:brand) }
 
-  it { should respond_to(:products_cars) }
+  it { should respond_to(:products_car) }
   it { should respond_to(:companies) }
   it { should respond_to(:models) }
   it { should respond_to(:versions) }

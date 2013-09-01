@@ -13,7 +13,6 @@
           <%= f.hidden_field :product_id %>
           <%= text_field :product, :name, disabled: "true" %>
         </p>
-
         <p>
           <%= f.label :company %>
           <%= f.select(:company_id, Company.all.collect{ |p| [p.name, p.id] }, { }, { }) %>

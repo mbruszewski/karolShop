@@ -5,12 +5,22 @@ module OffertHelper
     return company.name.upcase
   end
 
-  def get_redirect_path(id)
-    offert_index_path + "?id=" + id.to_s
-  end
+  def get_redirect_path(*params)
+    string = offert_index_path
 
-  def get_redirect_path2(id,id2)
-    offert_index_path + "?id=" + id.to_s + "&id2=" + id2.to_s;
+    if params.length >= 1
+      string += "?id=" + params[0].to_s
+    end
+
+    if params.length >= 2
+      string += "&id2=" + params[1].to_s
+    end
+
+    if params.length >= 3
+      string += "&id3=" + params[2].to_s
+    end
+
+    return string
   end
 
 end

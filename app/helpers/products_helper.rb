@@ -24,7 +24,11 @@ module ProductsHelper
     end
   end
 
-  def get_all_cars(product)
-    str = ""
+  def get_all_cars(version)
+    str = "-"
+    str += version.model.company.name + " "
+    str += version.model.name + " "
+    str += version.name
+    return str
   end
 end

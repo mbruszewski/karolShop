@@ -5,10 +5,10 @@ class Product < ActiveRecord::Base
 	belongs_to :category
 	belongs_to :brand
 
-  has_many :products_cars, class_name: "ProductsCars"
-  has_many :companies, through: :products_cars, source: "company"
-  has_many :models, through: :products_cars, source: "model"
-  has_many :versions, through: :products_cars, source: "version"
+  has_many :products_car, class_name: "ProductsCar"
+  has_many :companies, through: :products_car, source: "company"
+  has_many :models, through: :products_car, source: "model"
+  has_many :versions, through: :products_car, source: "version"
 
 =begin
   has_many :companies_products, class_name: "CompaniesProducts"
@@ -26,6 +26,16 @@ class Product < ActiveRecord::Base
   validates :name, presence: :true
 	validates :price, presence: :true, numericality: { greater_than: 0 }, format: { with: VALID_PRICE_REGEX }
 
+  def self.find_by_company(id)
+    Company.find(id).products.group("products.name")
+  end
 
+  def self.find_by_model(id)
+    Model.find(id).products
+  end
+
+  def self.find_by_version(id)
+    Version.find(id).products
+  end
 
 end
